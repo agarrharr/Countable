@@ -45,6 +45,30 @@ struct ContentView: View {
                         CounterFeature()
                     }
                 )
+                
+                HStack {
+                    Button {
+                        //store.send()
+                    } label: {
+                        Image(systemName: "arrow.circlepath")
+                            //.padding()
+                            .foregroundColor(.white)
+                            //.background(.white)
+                            //.clipShape(Circle())
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        //store.send()
+                    } label: {
+                        Image(systemName: "gear")
+                        //.padding()
+                        .foregroundColor(.white)
+                        //.background(.white)
+                        //.clipShape(Circle())
+                    }
+                }
             }
             .padding()
         }
