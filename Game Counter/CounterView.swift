@@ -30,11 +30,13 @@ struct CounterView: View {
     var body: some View {
         VStack {
             Text("\(store.score)")
-                .font(.largeTitle)
-            
+                .padding(40)
+                .font(.system(size: 500))
+                .minimumScaleFactor(0.01)
+
             Spacer()
                 .frame(height: 20)
-            
+
             HStack {
                 Spacer()
                 VStack {
@@ -66,7 +68,7 @@ struct CounterView: View {
 }
 
 #Preview {
-    CounterView(store: Store(initialState: CounterFeature.State(score: 20)) {
+    CounterView(store: Store(initialState: CounterFeature.State(score: 100)) {
         CounterFeature()
     })
 }
