@@ -17,7 +17,10 @@ struct CounterFeature {
             switch action {
             case let .buttonTapped(amount):
                 state.score += amount
-                return .none
+                return .run { _ in
+                    let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
+                    await impactFeedback.impactOccurred()
+                }
             }
         }
     }
