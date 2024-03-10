@@ -6,7 +6,7 @@ struct GameCounterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(store: Store(initialState: AppFeature.State()) {
-                AppFeature()
+                AppFeature()._printChanges()
             })
         }
     }
@@ -29,16 +29,52 @@ struct GradientBackgroundView: View {
 
 @Reducer
 struct AppFeature {
+    @Reducer
+    enum Destination {
+        case settings(SettingsFeature)
+    }
+    
     @ObservableState
     struct State {
+        @Presents var destination: Destination.State?
+
         @Shared(.appStorage("player1Score")) var player1Score: Int = 0
         @Shared(.appStorage("player2Score")) var player2Score: Int = 0
+        @Shared(.appStorage("startingScore")) var startingScore: String = "0"
+        
+        var startingScoreInt: Int {
+            Int(startingScore) ?? 0
+        }
+    }
+    
+    enum Action {
+        case destination(PresentationAction<Destination.Action>)
+
+        case resetButtonTapped
+        case settingsButtonTapped
+    }
+    
+    public var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .destination:
+                return .none
+            case .resetButtonTapped:
+                state.player1Score = state.startingScoreInt
+                state.player2Score = state.startingScoreInt
+                return .none
+            case .settingsButtonTapped:
+                state.destination = .settings(SettingsFeature.State(startingScore: state.$startingScore))
+                return .none
+            }
+        }
+        .ifLet(\.$destination, action: \.destination)
     }
 }
 
 
 struct ContentView: View {
-    var store: StoreOf<AppFeature>
+    @Bindable var store: StoreOf<AppFeature>
     
     var body: some View {
         ZStack {
@@ -61,29 +97,32 @@ struct ContentView: View {
                 
                 HStack {
                     Button {
-                        //store.send()
+                        store.send(.resetButtonTapped)
                     } label: {
                         Image(systemName: "arrow.circlepath")
-                            //.padding()
                             .foregroundColor(.white)
-                            //.background(.white)
-                            //.clipShape(Circle())
                     }
                     
                     Spacer()
                     
                     Button {
-                        //store.send()
+                        store.send(.settingsButtonTapped)
                     } label: {
                         Image(systemName: "gear")
-                        //.padding()
                         .foregroundColor(.white)
-                        //.background(.white)
-                        //.clipShape(Circle())
                     }
                 }
             }
             .padding()
+            .sheet(
+                item: $store.scope(
+                    state: \.destination?.settings,
+                    action: \.destination.settings
+                )
+            ) { store in
+                SettingsView(store: store)
+                    .presentationDragIndicator(.visible)
+            }
         }
     }
 }

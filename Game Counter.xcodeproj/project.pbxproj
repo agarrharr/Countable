@@ -15,6 +15,7 @@
 		9933B6CB2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */; };
 		9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6D72B9E12C500CFA3CC /* CounterView.swift */; };
 		99DFD0722B9E351E0032AC0B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99DFD0712B9E351E0032AC0B /* ComposableArchitecture */; };
+		99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD0732B9E50940032AC0B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9933B6C82B9E128500CFA3CC /* Game_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterUITests.swift; sourceTree = "<group>"; };
 		9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9933B6D72B9E12C500CFA3CC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		99DFD0732B9E50940032AC0B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				9933B6D72B9E12C500CFA3CC /* CounterView.swift */,
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
 				9933B6B32B9E128500CFA3CC /* Preview Content */,
+				99DFD0732B9E50940032AC0B /* SettingsView.swift */,
 			);
 			path = "Game Counter";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */,
 				9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */,
 				9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */,
 			);
