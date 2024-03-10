@@ -1,19 +1,27 @@
-//
-//  ContentView.swift
-//  Game Counter
-//
-//  Created by Adam Garrett-Harris on 3/10/24.
-//
-
+import ComposableArchitecture
 import SwiftUI
+
+@main
+struct GameCounterApp: App {
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            CounterView(store: Store(initialState: CounterFeature.State(score: 20)) {
+                CounterFeature()
+            })
+                .rotationEffect(.degrees(-180))
+            CounterView(store: Store(initialState: CounterFeature.State(score: 20)) {
+                CounterFeature()
+            })
         }
         .padding()
     }
