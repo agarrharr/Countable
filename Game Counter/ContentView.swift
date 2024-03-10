@@ -3,7 +3,6 @@ import SwiftUI
 
 @main
 struct GameCounterApp: App {
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -11,19 +10,44 @@ struct GameCounterApp: App {
     }
 }
 
+struct GradientBackgroundView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [Color("LightBlue"), Color("DarkBlue")]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            }
+            .edgesIgnoringSafeArea(.all)
+        }
+    }
+}
+
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            CounterView(store: Store(initialState: CounterFeature.State(score: 20)) {
-                CounterFeature()
-            })
+        ZStack {
+            GradientBackgroundView()
+            VStack {
+                CounterView(
+                    colorMode: .light,
+                    store: Store(initialState: CounterFeature.State(score: 20)) {
+                        CounterFeature()
+                    }
+                )
                 .rotationEffect(.degrees(-180))
-            CounterView(store: Store(initialState: CounterFeature.State(score: 20)) {
-                CounterFeature()
-            })
+                
+                CounterView(
+                    colorMode: .dark,
+                    store: Store(initialState: CounterFeature.State(score: 20)) {
+                        CounterFeature()
+                    }
+                )
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

@@ -23,16 +23,40 @@ struct CounterFeature {
     }
 }
 
+enum ColorMode {
+    case light
+    case dark
+}
 
 struct CounterView: View {
+    var colorMode: ColorMode
     var store: StoreOf<CounterFeature>
+    
+    private var primaryColor: Color {
+        switch colorMode {
+        case .light:
+            .black
+        case .dark:
+            .white
+        }
+    }
+    
+    private var secondaryColor: Color {
+        switch colorMode {
+        case .light:
+            .white
+        case .dark:
+            .black
+        }
+    }
     
     var body: some View {
         VStack {
             Text("\(store.score)")
                 .padding(40)
-                .font(.system(size: 500))
+                .font(.system(size: 150))
                 .minimumScaleFactor(0.01)
+                .foregroundStyle(primaryColor)
 
             Spacer()
                 .frame(height: 20)
@@ -40,24 +64,52 @@ struct CounterView: View {
             HStack {
                 Spacer()
                 VStack {
-                    Button("-1") {
+                    Button {
                         store.send(.buttonTapped(-1))
+                    } label: {
+                        Text("-1")
+                            .padding()
+                            .foregroundColor(secondaryColor)
+                            .background(primaryColor)
+                            .clipShape(Circle())
                     }
+                    
                     Spacer()
                         .frame(height: 20)
-                    Button("-5") {
+                    
+                    Button {
                         store.send(.buttonTapped(-5))
+                    } label: {
+                        Text("-5")
+                            .padding()
+                            .foregroundColor(secondaryColor)
+                            .background(primaryColor)
+                            .clipShape(Circle())
                     }
                 }
                 Spacer()
                 VStack {
-                    Button("+1") {
+                    Button {
                         store.send(.buttonTapped(1))
+                    } label: {
+                        Text("+1")
+                            .padding()
+                            .foregroundColor(secondaryColor)
+                            .background(primaryColor)
+                            .clipShape(Circle())
                     }
+                    
                     Spacer()
                         .frame(height: 20)
-                    Button("+5") {
+                    
+                    Button {
                         store.send(.buttonTapped(5))
+                    } label: {
+                        Text("+5")
+                            .padding()
+                            .foregroundColor(secondaryColor)
+                            .background(primaryColor)
+                            .clipShape(Circle())
                     }
                 }
                 Spacer()
@@ -68,7 +120,10 @@ struct CounterView: View {
 }
 
 #Preview {
-    CounterView(store: Store(initialState: CounterFeature.State(score: 100)) {
-        CounterFeature()
-    })
+    CounterView(
+        colorMode: .light,
+        store: Store(initialState: CounterFeature.State(score: 100)) {
+            CounterFeature()
+        }
+    )
 }
