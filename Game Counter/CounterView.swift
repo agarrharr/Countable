@@ -30,24 +30,35 @@ struct CounterView: View {
     var body: some View {
         VStack {
             Text("\(store.score)")
+                .font(.largeTitle)
+            
+            Spacer()
+                .frame(height: 20)
             
             HStack {
+                Spacer()
                 VStack {
                     Button("-1") {
                         store.send(.buttonTapped(-1))
                     }
+                    Spacer()
+                        .frame(height: 20)
                     Button("-5") {
                         store.send(.buttonTapped(-5))
                     }
                 }
+                Spacer()
                 VStack {
                     Button("+1") {
                         store.send(.buttonTapped(1))
                     }
+                    Spacer()
+                        .frame(height: 20)
                     Button("+5") {
                         store.send(.buttonTapped(5))
                     }
                 }
+                Spacer()
             }
         }
         .padding()
