@@ -5,7 +5,7 @@ import SwiftUI
 struct CounterFeature {
     @ObservableState
     struct State {
-        var score: Int
+        @Shared var score: Int
     }
     
     enum Action {
@@ -125,7 +125,7 @@ struct CounterView: View {
 #Preview {
     CounterView(
         colorMode: .light,
-        store: Store(initialState: CounterFeature.State(score: 100)) {
+        store: Store(initialState: CounterFeature.State(score: Shared(100))) {
             CounterFeature()
         }
     )

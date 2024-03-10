@@ -5,7 +5,9 @@ import SwiftUI
 struct GameCounterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: Store(initialState: AppFeature.State()) {
+                AppFeature()
+            })
         }
     }
 }
@@ -25,15 +27,26 @@ struct GradientBackgroundView: View {
     }
 }
 
+@Reducer
+struct AppFeature {
+    @ObservableState
+    struct State {
+        @Shared(.appStorage("player1Score")) var player1Score: Int = 0
+        @Shared(.appStorage("player2Score")) var player2Score: Int = 0
+    }
+}
+
 
 struct ContentView: View {
+    var store: StoreOf<AppFeature>
+    
     var body: some View {
         ZStack {
             GradientBackgroundView()
             VStack {
                 CounterView(
                     colorMode: .light,
-                    store: Store(initialState: CounterFeature.State(score: 20)) {
+                    store: Store(initialState: CounterFeature.State(score: store.$player2Score)) {
                         CounterFeature()
                     }
                 )
@@ -41,7 +54,7 @@ struct ContentView: View {
                 
                 CounterView(
                     colorMode: .dark,
-                    store: Store(initialState: CounterFeature.State(score: 20)) {
+                    store: Store(initialState: CounterFeature.State(score: store.$player1Score)) {
                         CounterFeature()
                     }
                 )
@@ -76,5 +89,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(store: Store(initialState: AppFeature.State()) {
+        AppFeature()
+    })
 }
