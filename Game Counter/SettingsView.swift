@@ -61,6 +61,9 @@ struct SettingsView: View {
                                   Text("Starting Score")
                                 }
                             }
+                            .onTapGesture {
+                                isInputActive = true
+                            }
                         }
                     }
                 }
