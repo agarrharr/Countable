@@ -128,6 +128,7 @@ struct ContentView: View {
             ) { store in
                 SettingsView(store: store)
                     .presentationDragIndicator(.visible)
+                    .presentationDetents([.medium, .large])
             }
         }
     }

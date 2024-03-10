@@ -62,7 +62,7 @@ struct CounterView: View {
                 .foregroundStyle(primaryColor)
 
             Spacer()
-                .frame(height: 20)
+                .frame(height: 10)
 
             HStack {
                 Spacer()
