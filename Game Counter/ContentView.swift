@@ -107,6 +107,8 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "arrow.circlepath")
                             .foregroundColor(.white)
+                            .imageScale(.large)
+                            .accessibilityLabel("Reset")
                     }
                     
                     Spacer()
@@ -115,7 +117,9 @@ struct ContentView: View {
                         store.send(.settingsButtonTapped)
                     } label: {
                         Image(systemName: "gear")
-                        .foregroundColor(.white)
+                            .foregroundColor(.white)
+                            .imageScale(.large)
+                            .accessibilityLabel("Settings")
                     }
                 }
             }
