@@ -62,10 +62,16 @@ struct AppFeature {
             case .resetButtonTapped:
                 state.player1Score = state.startingScoreInt
                 state.player2Score = state.startingScoreInt
-                return .none
+                return .run { _ in
+                    let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
+                    await impactFeedback.impactOccurred()
+                }
             case .settingsButtonTapped:
                 state.destination = .settings(SettingsFeature.State(startingScore: state.$startingScore))
-                return .none
+                return .run { _ in
+                    let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
+                    await impactFeedback.impactOccurred()
+                }
             }
         }
         .ifLet(\.$destination, action: \.destination)
