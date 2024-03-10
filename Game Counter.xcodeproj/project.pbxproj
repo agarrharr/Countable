@@ -16,6 +16,7 @@
 		9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6D72B9E12C500CFA3CC /* CounterView.swift */; };
 		99DFD0722B9E351E0032AC0B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99DFD0712B9E351E0032AC0B /* ComposableArchitecture */; };
 		99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD0732B9E50940032AC0B /* SettingsView.swift */; };
+		99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9933B6D72B9E12C500CFA3CC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		99DFD0732B9E50940032AC0B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		99DFD0782B9E673E0032AC0B /* Game-Counter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Game-Counter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 		9933B6AC2B9E128200CFA3CC /* Game Counter */ = {
 			isa = PBXGroup;
 			children = (
+				99DFD0782B9E673E0032AC0B /* Game-Counter-Info.plist */,
+				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
 				9933B6AF2B9E128200CFA3CC /* ContentView.swift */,
 				9933B6D72B9E12C500CFA3CC /* CounterView.swift */,
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
@@ -250,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */,
 				9933B6B52B9E128500CFA3CC /* Preview Assets.xcassets in Resources */,
 				9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */,
 			);
@@ -446,6 +452,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Game-Counter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +488,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Game-Counter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

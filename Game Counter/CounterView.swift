@@ -57,7 +57,8 @@ struct CounterView: View {
         VStack {
             Text("\(store.score)")
                 .padding(40)
-                .font(.system(size: 150))
+//                .font(.system(size: 150))
+                .font(Font.custom("Bitter-Regular", size: 150))
                 .minimumScaleFactor(0.01)
                 .foregroundStyle(primaryColor)
 
@@ -125,7 +126,7 @@ struct CounterView: View {
 #Preview {
     CounterView(
         colorMode: .light,
-        store: Store(initialState: CounterFeature.State(score: Shared(100))) {
+        store: Store(initialState: CounterFeature.State(score: Shared(1234567890))) {
             CounterFeature()
         }
     )
