@@ -24,15 +24,16 @@ struct AddIntent: AppIntent {
     @Parameter(title: "Person")
     var person: Person
 
-    func perform() async throws -> some IntentResult {
+    func perform() async throws -> some IntentResult & ReturnsValue<Int> {
         let store = UserDefaults()
         let key = switch person {
         case .myself: "player1Score"
         case .opponent: "player2Score"
         }
         let score = store.integer(forKey: key)
-        store.setValue(score + amount, forKey: key)
-        return .result()
+        let newScore = score + amount
+        store.setValue(newScore, forKey: key)
+        return .result(value: newScore)
     }
     
     static var parameterSummary: some ParameterSummary {
