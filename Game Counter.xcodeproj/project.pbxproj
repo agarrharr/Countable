@@ -17,7 +17,7 @@
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
 		9979B4612BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */; };
-		9979B4632BA10B1100FC2D9B /* Game_Counter_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* Game_Counter_Widget.swift */; };
+		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
 		9979B46B2BA10B1200FC2D9B /* Game Counter WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* Game Counter WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -91,7 +91,7 @@
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Counter_WidgetBundle.swift; sourceTree = "<group>"; };
-		9979B4622BA10B1100FC2D9B /* Game_Counter_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Counter_Widget.swift; sourceTree = "<group>"; };
+		9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerWidget.swift; sourceTree = "<group>"; };
 		9979B4642BA10B1100FC2D9B /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		9979B4662BA10B1200FC2D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9979B4682BA10B1200FC2D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */,
-				9979B4622BA10B1100FC2D9B /* Game_Counter_Widget.swift */,
+				9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */,
 				9979B4642BA10B1100FC2D9B /* AppIntent.swift */,
 				9979B4662BA10B1200FC2D9B /* Assets.xcassets */,
 				9979B4682BA10B1200FC2D9B /* Info.plist */,
@@ -421,7 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9979B4632BA10B1100FC2D9B /* Game_Counter_Widget.swift in Sources */,
+				9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */,
 				9979B4862BA111B600FC2D9B /* Intents.swift in Sources */,
 				9979B4612BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift in Sources */,
 				9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */,
