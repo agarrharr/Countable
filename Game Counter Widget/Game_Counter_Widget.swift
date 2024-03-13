@@ -11,15 +11,7 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
+        let entries: [SimpleEntry] = [SimpleEntry(date: Date(), configuration: configuration)]
 
         return Timeline(entries: entries, policy: .atEnd)
     }
@@ -32,14 +24,21 @@ struct SimpleEntry: TimelineEntry {
 
 struct Game_Counter_WidgetEntryView : View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var family
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+        switch family {
+        case .systemSmall:
+            VStack {
+                Text("Hello \(entry.configuration.player)")
+                Text(entry.configuration.player.localizedStringResource)
+            }
+        default:
+            VStack {
+                Text("Hello")
+                Text(entry.configuration.player.localizedStringResource)
+            }
         }
     }
 }
@@ -52,19 +51,21 @@ struct Game_Counter_Widget: Widget {
             Game_Counter_WidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .configurationDisplayName("Single Player")
+        .description("Keep track of one player's score")
     }
 }
 
 extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
+    fileprivate static var myself: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
+        intent.player = .myself
         return intent
     }
     
-    fileprivate static var starEyes: ConfigurationAppIntent {
+    fileprivate static var opponent: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
+        intent.player = .opponent
         return intent
     }
 }
@@ -72,6 +73,6 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     Game_Counter_Widget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, configuration: .myself)
+    SimpleEntry(date: .now, configuration: .opponent)
 }
