@@ -15,13 +15,13 @@ extension Player: AppEnum {
     ]
 }
 
-struct OpenCounter: AppIntent {
-    static var title: LocalizedStringResource = "Open Counter"
-    
-    func perform() async throws -> some IntentResult {
-        .result()
-    }
-}
+//struct OpenCounter: AppIntent {
+//    static var title: LocalizedStringResource = "Open Counter"
+//    
+//    func perform() async throws -> some IntentResult {
+//        .result()
+//    }
+//}
 
 struct SnippetView: View {
     var player1: Int
@@ -37,7 +37,7 @@ struct SnippetView: View {
     }
 }
 
-struct AddIntent: AppIntent {
+struct AddPointsIntent: AppIntent {
     static var title: LocalizedStringResource = "Add to Score"
     
     @Parameter(title: "Amount", requestValueDialog: "How many points?")
@@ -79,7 +79,7 @@ struct AddIntent: AppIntent {
 //struct GameCounterAutoShortcuts: AppShortcutsProvider {
 //    static var appShortcuts: [AppShortcut] {
 //        AppShortcut(
-//            intent: AddIntent(),
+//            intent: AddPointsIntent(),
 //            phrases: ["Add to my score in \(.applicationName)"],
 //            shortTitle: "Add to my score",
 //            systemImageName: "plus.circle"
