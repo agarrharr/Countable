@@ -1,32 +1,6 @@
 import ComposableArchitecture
 import SwiftUI
 
-@main
-struct GameCounterApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView(store: Store(initialState: AppFeature.State()) {
-                AppFeature()._printChanges()
-            })
-        }
-    }
-}
-
-struct GradientBackgroundView: View {
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                LinearGradient(
-                    gradient: Gradient(colors: [Color("LightBlue"), Color("DarkBlue")]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            }
-            .edgesIgnoringSafeArea(.all)
-        }
-    }
-}
-
 @Reducer
 struct AppFeature {
     @Reducer

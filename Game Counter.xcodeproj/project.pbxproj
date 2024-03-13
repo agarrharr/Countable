@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */; };
+		99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */; };
 		9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6AF2B9E128200CFA3CC /* ContentView.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
 		9933B6B52B9E128500CFA3CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */; };
@@ -77,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterApp.swift; sourceTree = "<group>"; };
+		99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		9933B6AA2B9E128200CFA3CC /* Game Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6AF2B9E128200CFA3CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				9933B6B32B9E128500CFA3CC /* Preview Content */,
 				99DFD0732B9E50940032AC0B /* SettingsView.swift */,
 				9979B4842BA111B600FC2D9B /* Intents.swift */,
+				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
+				99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */,
 			);
 			path = "Game Counter";
 			sourceTree = "<group>";
@@ -393,10 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */,
 				99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */,
 				9979B4852BA111B600FC2D9B /* Intents.swift in Sources */,
 				9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */,
 				9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */,
+				99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
