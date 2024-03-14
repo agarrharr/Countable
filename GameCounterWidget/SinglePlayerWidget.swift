@@ -48,7 +48,10 @@ struct SinglePlayerWidgetEntryView : View {
         case .systemSmall:
             VStack {
                 Text("\(entry.configuration.player.rawValue)")
+                
                 Text("\(entry.score)")
+                    .contentTransition(.numericText())
+                
                 HStack {
                     Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
                         Text("-")
