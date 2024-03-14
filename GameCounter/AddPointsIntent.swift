@@ -73,7 +73,7 @@ struct SubtractPointsIntent: AppIntent {
     }
     
     static var parameterSummary: some ParameterSummary {
-        Summary("Add \(\.$amount) to \(\.$player)")
+        Summary("Subtract \(\.$amount) from \(\.$player)")
     }
 }
 
