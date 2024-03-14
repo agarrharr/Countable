@@ -1,5 +1,6 @@
 import AppIntents
 import SwiftUI
+import WidgetKit
 
 enum Player: String {
     case myself
@@ -40,7 +41,7 @@ struct SnippetView: View {
 struct AddPointsIntent: AppIntent {
     static var title: LocalizedStringResource = "Add to Score"
     
-    @Parameter(title: "Amount", requestValueDialog: "How many points?")
+    @Parameter(title: "Amount", default: 1, requestValueDialog: "How many points?")
     var amount: Int
     
     @Parameter(title: "Player", requestValueDialog: "Which player?")
@@ -55,6 +56,7 @@ struct AddPointsIntent: AppIntent {
             let score2 = store.integer(forKey: "player2Score")
             let newScore = score + amount
             store.setValue(newScore, forKey: key)
+            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
             return .result(value: newScore) {
                 SnippetView(player1: newScore, player2: score2)
             }
@@ -64,11 +66,11 @@ struct AddPointsIntent: AppIntent {
             let score1 = store.integer(forKey: "player1Score")
             let newScore = score + amount
             store.setValue(newScore, forKey: key)
+            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
             return .result(value: newScore) {
                 SnippetView(player1: score1, player2: newScore)
             }
         }
-        
     }
     
     static var parameterSummary: some ParameterSummary {

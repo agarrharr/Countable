@@ -3,22 +3,34 @@ import SwiftUI
 
 struct SinglePlayerProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SinglePlayerEntry {
-        SinglePlayerEntry(date: Date(), configuration: SinglePlayerConfigurationAppIntent())
+        SinglePlayerEntry(date: Date(), score: 0, configuration: SinglePlayerConfigurationAppIntent())
     }
 
     func snapshot(for configuration: SinglePlayerConfigurationAppIntent, in context: Context) async -> SinglePlayerEntry {
-        SinglePlayerEntry(date: Date(), configuration: configuration)
+        SinglePlayerEntry(date: Date(), score: getScore(player: configuration.player), configuration: configuration)
     }
     
     func timeline(for configuration: SinglePlayerConfigurationAppIntent, in context: Context) async -> Timeline<SinglePlayerEntry> {
-        let entries: [SinglePlayerEntry] = [SinglePlayerEntry(date: Date(), configuration: configuration)]
+        let entries: [SinglePlayerEntry] = [
+            SinglePlayerEntry(date: Date(), score: getScore(player: configuration.player), configuration: configuration)
+        ]
 
         return Timeline(entries: entries, policy: .atEnd)
+    }
+    
+    private func getScore(player: Player) -> Int {
+      let store = UserDefaults()
+        let key = switch player {
+        case .myself: "player1Score"
+        case .opponent: "player1Score"
+        }
+        return store.integer(forKey: key)
     }
 }
 
 struct SinglePlayerEntry: TimelineEntry {
     let date: Date
+    let score: Int
     let configuration: SinglePlayerConfigurationAppIntent
 }
 
@@ -32,19 +44,24 @@ struct SinglePlayerWidgetEntryView : View {
         case .systemSmall:
             VStack {
                 Text("Hello \(entry.configuration.player)")
-                Text(entry.configuration.player.localizedStringResource)
+                Text("\(entry.score)")
+                HStack {
+                    Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
+                        Text("-")
+                    }
+                }
             }
         default:
             VStack {
-                Text("Hello")
-                Text(entry.configuration.player.localizedStringResource)
+                Text("Hello \(entry.configuration.player)")
+                Text("\(entry.score)")
             }
         }
     }
 }
 
 struct SinglePlayerWidget: Widget {
-    let kind: String = "Single Player Widget"
+    let kind: String = "com.garrett-harris.adam.game-counter-app.singleplayerwidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: SinglePlayerConfigurationAppIntent.self, provider: SinglePlayerProvider()) { entry in
@@ -73,6 +90,6 @@ extension SinglePlayerConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, configuration: .myself)
-    SinglePlayerEntry(date: .now, configuration: .opponent)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
 }
