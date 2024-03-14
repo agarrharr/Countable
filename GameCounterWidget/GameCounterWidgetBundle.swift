@@ -2,7 +2,7 @@ import WidgetKit
 import SwiftUI
 
 @main
-struct Game_Counter_WidgetBundle: WidgetBundle {
+struct GameCounterWidgetBundle: WidgetBundle {
     var body: some Widget {
         SinglePlayerWidget()
     }

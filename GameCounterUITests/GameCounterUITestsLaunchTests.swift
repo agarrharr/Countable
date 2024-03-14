@@ -1,13 +1,6 @@
-//
-//  Game_CounterUITestsLaunchTests.swift
-//  Game CounterUITests
-//
-//  Created by Adam Garrett-Harris on 3/10/24.
-//
-
 import XCTest
 
-final class Game_CounterUITestsLaunchTests: XCTestCase {
+final class GameCounterUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

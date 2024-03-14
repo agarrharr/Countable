@@ -9,28 +9,36 @@
 /* Begin PBXBuildFile section */
 		99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */; };
 		99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */; };
+		99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
+		99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
+		99016ED02BA36FDC00B7D289 /* GameCounter WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6AF2B9E128200CFA3CC /* ContentView.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
 		9933B6B52B9E128500CFA3CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */; };
-		9933B6BF2B9E128500CFA3CC /* Game_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* Game_CounterTests.swift */; };
-		9933B6C92B9E128500CFA3CC /* Game_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6C82B9E128500CFA3CC /* Game_CounterUITests.swift */; };
-		9933B6CB2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */; };
+		9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */; };
+		9933B6C92B9E128500CFA3CC /* GameCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */; };
+		9933B6CB2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */; };
 		9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6D72B9E12C500CFA3CC /* CounterView.swift */; };
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
-		9979B4612BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */; };
+		9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */; };
 		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
-		9979B46B2BA10B1200FC2D9B /* Game Counter WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* Game Counter WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9979B4852BA111B600FC2D9B /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
-		9979B4862BA111B600FC2D9B /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
-		99DFD0722B9E351E0032AC0B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99DFD0712B9E351E0032AC0B /* ComposableArchitecture */; };
+		99B95CF62BA376C2003F72F3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99B95CF52BA376C2003F72F3 /* ComposableArchitecture */; };
 		99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD0732B9E50940032AC0B /* SettingsView.swift */; };
 		99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		99016ED12BA36FDC00B7D289 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9979B4592BA10B1000FC2D9B;
+			remoteInfo = "Game Counter WidgetExtension";
+		};
 		9933B6BB2B9E128500CFA3CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
@@ -45,23 +53,16 @@
 			remoteGlobalIDString = 9933B6A92B9E128200CFA3CC;
 			remoteInfo = "Game Counter";
 		};
-		9979B4692BA10B1200FC2D9B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9979B4592BA10B1000FC2D9B;
-			remoteInfo = "Game Counter WidgetExtension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9979B46C2BA10B1200FC2D9B /* Embed Foundation Extensions */ = {
+		99016ED32BA36FDC00B7D289 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9979B46B2BA10B1200FC2D9B /* Game Counter WidgetExtension.appex in Embed Foundation Extensions */,
+				99016ED02BA36FDC00B7D289 /* GameCounter WidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,29 +82,29 @@
 /* Begin PBXFileReference section */
 		99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterApp.swift; sourceTree = "<group>"; };
 		99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
-		9933B6AA2B9E128200CFA3CC /* Game Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9933B6AA2B9E128200CFA3CC /* GameCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6AF2B9E128200CFA3CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9933B6BA2B9E128500CFA3CC /* Game CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9933B6BE2B9E128500CFA3CC /* Game_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterTests.swift; sourceTree = "<group>"; };
-		9933B6C42B9E128500CFA3CC /* Game CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9933B6C82B9E128500CFA3CC /* Game_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterUITests.swift; sourceTree = "<group>"; };
-		9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterTests.swift; sourceTree = "<group>"; };
+		9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITests.swift; sourceTree = "<group>"; };
+		9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9933B6D72B9E12C500CFA3CC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		9979B45A2BA10B1000FC2D9B /* Game Counter WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Game Counter WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GameCounter WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Counter_WidgetBundle.swift; sourceTree = "<group>"; };
+		9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterWidgetBundle.swift; sourceTree = "<group>"; };
 		9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerWidget.swift; sourceTree = "<group>"; };
 		9979B4642BA10B1100FC2D9B /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		9979B4662BA10B1200FC2D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9979B4682BA10B1200FC2D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9979B4702BA10D0200FC2D9B /* Game Counter WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Game Counter WidgetExtension.entitlements"; sourceTree = "<group>"; };
-		9979B4712BA10D3900FC2D9B /* Game Counter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Game Counter.entitlements"; sourceTree = "<group>"; };
+		9979B4702BA10D0200FC2D9B /* GameCounterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounterWidgetExtension.entitlements; sourceTree = "<group>"; };
+		9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounter.entitlements; sourceTree = "<group>"; };
 		9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointsIntent.swift; sourceTree = "<group>"; };
 		99DFD0732B9E50940032AC0B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		99DFD0782B9E673E0032AC0B /* Game-Counter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Game-Counter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameCounter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99DFD0722B9E351E0032AC0B /* ComposableArchitecture in Frameworks */,
+				99B95CF62BA376C2003F72F3 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,11 +146,10 @@
 		9933B6A12B9E128200CFA3CC = {
 			isa = PBXGroup;
 			children = (
-				9979B4702BA10D0200FC2D9B /* Game Counter WidgetExtension.entitlements */,
-				9933B6AC2B9E128200CFA3CC /* Game Counter */,
-				9933B6BD2B9E128500CFA3CC /* Game CounterTests */,
-				9933B6C72B9E128500CFA3CC /* Game CounterUITests */,
-				9979B45F2BA10B1100FC2D9B /* Game Counter Widget */,
+				9933B6AC2B9E128200CFA3CC /* GameCounter */,
+				9933B6BD2B9E128500CFA3CC /* GameCounterTests */,
+				9933B6C72B9E128500CFA3CC /* GameCounterUITests */,
+				9979B45F2BA10B1100FC2D9B /* GameCounterWidget */,
 				9933B6AB2B9E128200CFA3CC /* Products */,
 				99DFD0702B9E351E0032AC0B /* Frameworks */,
 			);
@@ -158,19 +158,19 @@
 		9933B6AB2B9E128200CFA3CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9933B6AA2B9E128200CFA3CC /* Game Counter.app */,
-				9933B6BA2B9E128500CFA3CC /* Game CounterTests.xctest */,
-				9933B6C42B9E128500CFA3CC /* Game CounterUITests.xctest */,
-				9979B45A2BA10B1000FC2D9B /* Game Counter WidgetExtension.appex */,
+				9933B6AA2B9E128200CFA3CC /* GameCounter.app */,
+				9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */,
+				9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */,
+				9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9933B6AC2B9E128200CFA3CC /* Game Counter */ = {
+		9933B6AC2B9E128200CFA3CC /* GameCounter */ = {
 			isa = PBXGroup;
 			children = (
-				9979B4712BA10D3900FC2D9B /* Game Counter.entitlements */,
-				99DFD0782B9E673E0032AC0B /* Game-Counter-Info.plist */,
+				9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */,
+				99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */,
 				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
 				9933B6AF2B9E128200CFA3CC /* ContentView.swift */,
 				9933B6D72B9E12C500CFA3CC /* CounterView.swift */,
@@ -181,7 +181,7 @@
 				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
 				99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */,
 			);
-			path = "Game Counter";
+			path = GameCounter;
 			sourceTree = "<group>";
 		};
 		9933B6B32B9E128500CFA3CC /* Preview Content */ = {
@@ -192,33 +192,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9933B6BD2B9E128500CFA3CC /* Game CounterTests */ = {
+		9933B6BD2B9E128500CFA3CC /* GameCounterTests */ = {
 			isa = PBXGroup;
 			children = (
-				9933B6BE2B9E128500CFA3CC /* Game_CounterTests.swift */,
+				9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */,
 			);
-			path = "Game CounterTests";
+			path = GameCounterTests;
 			sourceTree = "<group>";
 		};
-		9933B6C72B9E128500CFA3CC /* Game CounterUITests */ = {
+		9933B6C72B9E128500CFA3CC /* GameCounterUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9933B6C82B9E128500CFA3CC /* Game_CounterUITests.swift */,
-				9933B6CA2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift */,
+				9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */,
+				9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */,
 			);
-			path = "Game CounterUITests";
+			path = GameCounterUITests;
 			sourceTree = "<group>";
 		};
-		9979B45F2BA10B1100FC2D9B /* Game Counter Widget */ = {
+		9979B45F2BA10B1100FC2D9B /* GameCounterWidget */ = {
 			isa = PBXGroup;
 			children = (
-				9979B4602BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift */,
+				9979B4702BA10D0200FC2D9B /* GameCounterWidgetExtension.entitlements */,
+				9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */,
 				9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */,
 				9979B4642BA10B1100FC2D9B /* AppIntent.swift */,
 				9979B4662BA10B1200FC2D9B /* Assets.xcassets */,
 				9979B4682BA10B1200FC2D9B /* Info.plist */,
 			);
-			path = "Game Counter Widget";
+			path = GameCounterWidget;
 			sourceTree = "<group>";
 		};
 		99DFD0702B9E351E0032AC0B /* Frameworks */ = {
@@ -233,32 +234,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9933B6A92B9E128200CFA3CC /* Game Counter */ = {
+		9933B6A92B9E128200CFA3CC /* GameCounter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9933B6CE2B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game Counter" */;
+			buildConfigurationList = 9933B6CE2B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounter" */;
 			buildPhases = (
 				9933B6A62B9E128200CFA3CC /* Sources */,
 				9933B6A72B9E128200CFA3CC /* Frameworks */,
 				9933B6A82B9E128200CFA3CC /* Resources */,
-				9979B46C2BA10B1200FC2D9B /* Embed Foundation Extensions */,
 				9979B4832BA1111400FC2D9B /* Embed ExtensionKit Extensions */,
+				99016ED32BA36FDC00B7D289 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9979B46A2BA10B1200FC2D9B /* PBXTargetDependency */,
+				99016ED22BA36FDC00B7D289 /* PBXTargetDependency */,
 			);
-			name = "Game Counter";
+			name = GameCounter;
 			packageProductDependencies = (
-				99DFD0712B9E351E0032AC0B /* ComposableArchitecture */,
+				99B95CF52BA376C2003F72F3 /* ComposableArchitecture */,
 			);
 			productName = "Game Counter";
-			productReference = 9933B6AA2B9E128200CFA3CC /* Game Counter.app */;
+			productReference = 9933B6AA2B9E128200CFA3CC /* GameCounter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9933B6B92B9E128500CFA3CC /* Game CounterTests */ = {
+		9933B6B92B9E128500CFA3CC /* GameCounterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game CounterTests" */;
+			buildConfigurationList = 9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterTests" */;
 			buildPhases = (
 				9933B6B62B9E128500CFA3CC /* Sources */,
 				9933B6B72B9E128500CFA3CC /* Frameworks */,
@@ -269,14 +270,14 @@
 			dependencies = (
 				9933B6BC2B9E128500CFA3CC /* PBXTargetDependency */,
 			);
-			name = "Game CounterTests";
+			name = GameCounterTests;
 			productName = "Game CounterTests";
-			productReference = 9933B6BA2B9E128500CFA3CC /* Game CounterTests.xctest */;
+			productReference = 9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9933B6C32B9E128500CFA3CC /* Game CounterUITests */ = {
+		9933B6C32B9E128500CFA3CC /* GameCounterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game CounterUITests" */;
+			buildConfigurationList = 9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterUITests" */;
 			buildPhases = (
 				9933B6C02B9E128500CFA3CC /* Sources */,
 				9933B6C12B9E128500CFA3CC /* Frameworks */,
@@ -287,14 +288,14 @@
 			dependencies = (
 				9933B6C62B9E128500CFA3CC /* PBXTargetDependency */,
 			);
-			name = "Game CounterUITests";
+			name = GameCounterUITests;
 			productName = "Game CounterUITests";
-			productReference = 9933B6C42B9E128500CFA3CC /* Game CounterUITests.xctest */;
+			productReference = 9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		9979B4592BA10B1000FC2D9B /* Game Counter WidgetExtension */ = {
+		9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "Game Counter WidgetExtension" */;
+			buildConfigurationList = 9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounter WidgetExtension" */;
 			buildPhases = (
 				9979B4562BA10B1000FC2D9B /* Sources */,
 				9979B4572BA10B1000FC2D9B /* Frameworks */,
@@ -304,9 +305,9 @@
 			);
 			dependencies = (
 			);
-			name = "Game Counter WidgetExtension";
+			name = "GameCounter WidgetExtension";
 			productName = "Game Counter WidgetExtension";
-			productReference = 9979B45A2BA10B1000FC2D9B /* Game Counter WidgetExtension.appex */;
+			productReference = 9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -335,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9933B6A52B9E128200CFA3CC /* Build configuration list for PBXProject "Game Counter" */;
+			buildConfigurationList = 9933B6A52B9E128200CFA3CC /* Build configuration list for PBXProject "GameCounter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -351,10 +352,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9933B6A92B9E128200CFA3CC /* Game Counter */,
-				9933B6B92B9E128500CFA3CC /* Game CounterTests */,
-				9933B6C32B9E128500CFA3CC /* Game CounterUITests */,
-				9979B4592BA10B1000FC2D9B /* Game Counter WidgetExtension */,
+				9933B6A92B9E128200CFA3CC /* GameCounter */,
+				9933B6B92B9E128500CFA3CC /* GameCounterTests */,
+				9933B6C32B9E128500CFA3CC /* GameCounterUITests */,
+				9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -401,8 +402,9 @@
 			files = (
 				99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */,
 				99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */,
-				9979B4852BA111B600FC2D9B /* AddPointsIntent.swift in Sources */,
+				99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */,
 				9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */,
+				99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */,
 				9933B6D82B9E12C500CFA3CC /* CounterView.swift in Sources */,
 				99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */,
 			);
@@ -412,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9933B6BF2B9E128500CFA3CC /* Game_CounterTests.swift in Sources */,
+				9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9933B6C92B9E128500CFA3CC /* Game_CounterUITests.swift in Sources */,
-				9933B6CB2B9E128500CFA3CC /* Game_CounterUITestsLaunchTests.swift in Sources */,
+				9933B6C92B9E128500CFA3CC /* GameCounterUITests.swift in Sources */,
+				9933B6CB2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +431,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */,
 				9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */,
-				9979B4862BA111B600FC2D9B /* AddPointsIntent.swift in Sources */,
-				9979B4612BA10B1100FC2D9B /* Game_Counter_WidgetBundle.swift in Sources */,
+				9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */,
 				9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,20 +441,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		99016ED22BA36FDC00B7D289 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */;
+			targetProxy = 99016ED12BA36FDC00B7D289 /* PBXContainerItemProxy */;
+		};
 		9933B6BC2B9E128500CFA3CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9933B6A92B9E128200CFA3CC /* Game Counter */;
+			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
 			targetProxy = 9933B6BB2B9E128500CFA3CC /* PBXContainerItemProxy */;
 		};
 		9933B6C62B9E128500CFA3CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9933B6A92B9E128200CFA3CC /* Game Counter */;
+			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
 			targetProxy = 9933B6C52B9E128500CFA3CC /* PBXContainerItemProxy */;
-		};
-		9979B46A2BA10B1200FC2D9B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9979B4592BA10B1000FC2D9B /* Game Counter WidgetExtension */;
-			targetProxy = 9979B4692BA10B1200FC2D9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -579,18 +581,17 @@
 		9933B6CF2B9E128500CFA3CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Counter/Game Counter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = GameCounter/GameCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Game Counter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Game-Counter-Info.plist";
+				INFOPLIST_FILE = "GameCounter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -617,18 +618,17 @@
 		9933B6D02B9E128500CFA3CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Game Counter/Game Counter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = GameCounter/GameCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Game Counter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Game-Counter-Info.plist";
+				INFOPLIST_FILE = "GameCounter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -668,7 +668,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Game Counter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameCounter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameCounter";
 			};
 			name = Debug;
 		};
@@ -688,7 +688,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Game Counter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameCounter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GameCounter";
 			};
 			name = Release;
 		};
@@ -733,13 +733,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "Game Counter WidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Game Counter Widget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game Counter Widget";
+				INFOPLIST_FILE = GameCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GameCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -748,7 +748,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.Game-Counter-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -762,13 +762,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = "Game Counter WidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Game Counter Widget/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Game Counter Widget";
+				INFOPLIST_FILE = GameCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GameCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +777,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.Game-Counter-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -789,7 +789,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9933B6A52B9E128200CFA3CC /* Build configuration list for PBXProject "Game Counter" */ = {
+		9933B6A52B9E128200CFA3CC /* Build configuration list for PBXProject "GameCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9933B6CC2B9E128500CFA3CC /* Debug */,
@@ -798,7 +798,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9933B6CE2B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game Counter" */ = {
+		9933B6CE2B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9933B6CF2B9E128500CFA3CC /* Debug */,
@@ -807,7 +807,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game CounterTests" */ = {
+		9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9933B6D22B9E128500CFA3CC /* Debug */,
@@ -816,7 +816,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "Game CounterUITests" */ = {
+		9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9933B6D52B9E128500CFA3CC /* Debug */,
@@ -825,7 +825,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "Game Counter WidgetExtension" */ = {
+		9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounter WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9979B46D2BA10B1200FC2D9B /* Debug */,
@@ -848,7 +848,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		99DFD0712B9E351E0032AC0B /* ComposableArchitecture */ = {
+		99B95CF52BA376C2003F72F3 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 99DFD06F2B9E2A530032AC0B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;

@@ -38,6 +38,12 @@ struct SnippetView: View {
     }
 }
 
+//extension UserDefaults {
+//    static var shared: UserDefaults {
+//        return UserDefaults(suiteName: "group.com.garrett-harris.adam.game-counter-app")!
+//    }
+//}
+
 struct AddPointsIntent: AppIntent {
     static var title: LocalizedStringResource = "Add to Score"
     
@@ -48,7 +54,7 @@ struct AddPointsIntent: AppIntent {
     var player: Player
 
     func perform() async throws -> some IntentResult & ShowsSnippetView & ReturnsValue<Int> {
-        let store = UserDefaults()
+        let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
         switch player {
         case .myself:
             let key = "player1Score"
@@ -56,7 +62,7 @@ struct AddPointsIntent: AppIntent {
             let score2 = store.integer(forKey: "player2Score")
             let newScore = score + amount
             store.setValue(newScore, forKey: key)
-            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
+//            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
             return .result(value: newScore) {
                 SnippetView(player1: newScore, player2: score2)
             }
@@ -66,7 +72,7 @@ struct AddPointsIntent: AppIntent {
             let score1 = store.integer(forKey: "player1Score")
             let newScore = score + amount
             store.setValue(newScore, forKey: key)
-            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
+//            WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
             return .result(value: newScore) {
                 SnippetView(player1: score1, player2: newScore)
             }

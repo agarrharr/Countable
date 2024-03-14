@@ -1,13 +1,6 @@
-//
-//  Game_CounterUITests.swift
-//  Game CounterUITests
-//
-//  Created by Adam Garrett-Harris on 3/10/24.
-//
-
 import XCTest
 
-final class Game_CounterUITests: XCTestCase {
+final class GameCounterUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

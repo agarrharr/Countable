@@ -12,18 +12,23 @@ struct SinglePlayerProvider: AppIntentTimelineProvider {
     
     func timeline(for configuration: SinglePlayerConfigurationAppIntent, in context: Context) async -> Timeline<SinglePlayerEntry> {
         let entries: [SinglePlayerEntry] = [
-            SinglePlayerEntry(date: Date(), score: getScore(player: configuration.player), configuration: configuration)
+            SinglePlayerEntry(
+                date: Date(),
+                score: getScore(player: configuration.player),
+                configuration: configuration
+            )
         ]
 
         return Timeline(entries: entries, policy: .atEnd)
     }
     
     private func getScore(player: Player) -> Int {
-      let store = UserDefaults()
-        let key = switch player {
-        case .myself: "player1Score"
-        case .opponent: "player1Score"
-        }
+        let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
+//        let key = switch player {
+//        case .myself: "player1Score"
+//        case .opponent: "player2Score"
+//        }
+        let key = "player1Score"
         return store.integer(forKey: key)
     }
 }
