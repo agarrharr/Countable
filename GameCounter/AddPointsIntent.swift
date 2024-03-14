@@ -16,23 +16,22 @@ extension Player: AppEnum {
     ]
 }
 
-//struct OpenCounter: AppIntent {
-//    static var title: LocalizedStringResource = "Open Counter"
-//    
-//    func perform() async throws -> some IntentResult {
-//        .result()
-//    }
-//}
-
 struct SnippetView: View {
-    var player1: Int
-    var player2: Int
+    var score1: Int
+    var score2: Int
+    
+    let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
+    
+    init() {
+        self.score1 = store.integer(forKey: "player1Score")
+        self.score2 = store.integer(forKey: "player2Score")
+    }
 
     var body: some View {
         VStack {
-            Text("Player 1: \(player1)")
+            Text("Player 1: \(score1)")
                 .font(.title2)
-            Text("Player 2: \(player2)")
+            Text("Player 2: \(score2)")
                 .font(.title2)
         }
     }
@@ -48,32 +47,47 @@ struct AddPointsIntent: AppIntent {
     var player: Player
 
     func perform() async throws -> some IntentResult & ShowsSnippetView & ReturnsValue<Int> {
-        let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
-        switch player {
-        case .player1:
-            let key = "player1Score"
-            let score = store.integer(forKey: key)
-            let score2 = store.integer(forKey: "player2Score")
-            let newScore = score + amount
-            store.setValue(newScore, forKey: key)
-            return .result(value: newScore) {
-                SnippetView(player1: newScore, player2: score2)
-            }
-        case .player2:
-            let key = "player2Score"
-            let score = store.integer(forKey: key)
-            let score1 = store.integer(forKey: "player1Score")
-            let newScore = score + amount
-            store.setValue(newScore, forKey: key)
-            return .result(value: newScore) {
-                SnippetView(player1: score1, player2: newScore)
-            }
+        return .result(value: addToScore(amount, for: player)) {
+            SnippetView()
         }
     }
     
     static var parameterSummary: some ParameterSummary {
         Summary("Add \(\.$amount) to \(\.$player)")
     }
+}
+
+struct SubtractPointsIntent: AppIntent {
+    static var title: LocalizedStringResource = "Subtract from Score"
+    
+    @Parameter(title: "Amount", default: 1, requestValueDialog: "How many points?")
+    var amount: Int
+    
+    @Parameter(title: "Player", requestValueDialog: "Which player?")
+    var player: Player
+    
+    func perform() async throws -> some IntentResult & ShowsSnippetView & ReturnsValue<Int> {
+        return .result(value: addToScore(-amount, for: player)) {
+            SnippetView()
+        }
+    }
+    
+    static var parameterSummary: some ParameterSummary {
+        Summary("Add \(\.$amount) to \(\.$player)")
+    }
+}
+
+func addToScore(_ amount: Int, for player: Player) -> Int {
+    let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
+    let key = switch player {
+    case .player1: "player1Score"
+    case .player2: "player2Score"
+    }
+    
+    let score = store.integer(forKey: key)
+    let newScore = score + amount
+    store.setValue(newScore, forKey: key)
+    return newScore
 }
 
 //struct GameCounterAutoShortcuts: AppShortcutsProvider {

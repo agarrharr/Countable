@@ -54,13 +54,23 @@ struct SinglePlayerWidgetEntryView : View {
                     .contentTransition(.numericText())
                 
                 HStack {
-                    Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
+                    Button(
+                        intent: SubtractPointsIntent(
+                            amount: entry.configuration.$amountToSubtract,
+                            player: entry.configuration.$player
+                        )
+                    ) {
                         Text("-")
                     }
                     
                     Spacer()
                     
-                    Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
+                    Button(
+                        intent: AddPointsIntent(
+                            amount: entry.configuration.$amountToAdd,
+                            player: entry.configuration.$player
+                        )
+                    ) {
                         Text("+")
                     }
                 }

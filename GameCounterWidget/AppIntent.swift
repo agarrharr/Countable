@@ -7,4 +7,10 @@ struct SinglePlayerConfigurationAppIntent: WidgetConfigurationIntent {
 
     @Parameter(title: "Player", default: Player.player1)
     var player: Player
+    
+    @Parameter(title: "Amount to add", default: 1)
+    var amountToAdd: Int
+    
+    @Parameter(title: "Amount to subtract", default: 1)
+    var amountToSubtract: Int
 }
