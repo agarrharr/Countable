@@ -47,19 +47,22 @@ struct SinglePlayerWidgetEntryView : View {
         switch family {
         case .systemSmall:
             VStack {
-                Text("Hello \(entry.configuration.player)")
+                Text("\(entry.configuration.player)")
                 Text("\(entry.score)")
                 HStack {
                     Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
                         Text("-")
                     }
+                    
+                    Spacer()
+                    
+                    Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
+                        Text("+")
+                    }
                 }
             }
         default:
-            VStack {
-                Text("Hello \(entry.configuration.player)")
-                Text("\(entry.score)")
-            }
+            Text("\(entry.score)")
         }
     }
 }
@@ -74,6 +77,11 @@ struct SinglePlayerWidget: Widget {
         }
         .configurationDisplayName("Single Player")
         .description("Keep track of one player's score")
+        #if os(watchOS)
+        .supportedFamilies([.accessoryCircular, .accessoryInline, .accessoryRectangular])
+        #else
+        .supportedFamilies([.accessoryCircular, .accessoryInline, .accessoryRectangular, .systemSmall])
+        #endif
     }
 }
 
@@ -92,6 +100,27 @@ extension SinglePlayerConfigurationAppIntent {
 }
 
 #Preview(as: .systemSmall) {
+    SinglePlayerWidget()
+} timeline: {
+    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+}
+
+#Preview(as: .accessoryCircular) {
+    SinglePlayerWidget()
+} timeline: {
+    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+}
+
+#Preview(as: .accessoryInline) {
+    SinglePlayerWidget()
+} timeline: {
+    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+}
+
+#Preview(as: .accessoryRectangular) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
