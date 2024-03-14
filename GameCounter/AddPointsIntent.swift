@@ -90,13 +90,13 @@ func addToScore(_ amount: Int, for player: Player) -> Int {
     return newScore
 }
 
-//struct GameCounterAutoShortcuts: AppShortcutsProvider {
-//    static var appShortcuts: [AppShortcut] {
-//        AppShortcut(
-//            intent: AddPointsIntent(),
-//            phrases: ["Add to my score in \(.applicationName)"],
-//            shortTitle: "Add to my score",
-//            systemImageName: "plus.circle"
-//        )
-//    }
-//}
+struct GameCounterAutoShortcuts: AppShortcutsProvider {
+    static var appShortcuts: [AppShortcut] {
+        AppShortcut(
+            intent: AddPointsIntent(),
+            phrases: ["Add to score in \(.applicationName)"],
+            shortTitle: "Add to score",
+            systemImageName: "plus.circle"
+        )
+    }
+}
