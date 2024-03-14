@@ -81,6 +81,7 @@ struct SimpleButtonStyle: ButtonStyle {
 
 struct CounterView: View {
     var colorMode: ColorMode
+    var playerName: String
     var buttonColor: Color
     var store: StoreOf<CounterFeature>
     
@@ -115,6 +116,7 @@ struct CounterView: View {
                             .foregroundColor(primaryColor)
                     }
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    .accessibilityLabel("Subtract 1 from \(playerName)")
                     
                     Spacer()
                         .frame(height: 20)
@@ -127,6 +129,7 @@ struct CounterView: View {
                             .foregroundColor(primaryColor)
                     }
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    .accessibilityLabel("Subtract 5 from \(playerName)")
                 }
                 Spacer()
                 VStack {
@@ -138,6 +141,7 @@ struct CounterView: View {
                             .foregroundColor(primaryColor)
                     }
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    .accessibilityLabel("Add 1 to \(playerName)")
 
                     Spacer()
                         .frame(height: 20)
@@ -150,6 +154,7 @@ struct CounterView: View {
                             .foregroundColor(primaryColor)
                     }
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    .accessibilityLabel("Add 5 to \(playerName)")
 
                 }
                 Spacer()
@@ -164,6 +169,7 @@ struct CounterView: View {
         Color.blue
         CounterView(
             colorMode: .light,
+            playerName: "Player 1",
             buttonColor: .blue,
             store: Store(initialState: CounterFeature.State(score: Shared(10))) {
                 CounterFeature()

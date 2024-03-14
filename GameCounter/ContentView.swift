@@ -62,6 +62,7 @@ struct ContentView: View {
             VStack {
                 CounterView(
                     colorMode: .light,
+                    playerName: "Player 2",
                     buttonColor: Color("LightBlue"),
                     store: Store(initialState: CounterFeature.State(score: store.$player2Score)) {
                         CounterFeature()
@@ -71,6 +72,7 @@ struct ContentView: View {
                 
                 CounterView(
                     colorMode: .dark,
+                    playerName: "Player 1",
                     buttonColor: Color("DarkBlue"),
                     store: Store(initialState: CounterFeature.State(score: store.$player1Score)) {
                         CounterFeature()
