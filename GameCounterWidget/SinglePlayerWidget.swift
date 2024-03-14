@@ -1,5 +1,6 @@
 import WidgetKit
 import SwiftUI
+import AppIntents
 
 struct SinglePlayerProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SinglePlayerEntry {
@@ -42,7 +43,7 @@ struct SinglePlayerWidgetEntryView : View {
     var entry: SinglePlayerProvider.Entry
     
     @Environment(\.widgetFamily) var family
-
+    
     var body: some View {
         switch family {
         case .systemSmall:
