@@ -24,11 +24,10 @@ struct SinglePlayerProvider: AppIntentTimelineProvider {
     
     private func getScore(player: Player) -> Int {
         let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
-//        let key = switch player {
-//        case .myself: "player1Score"
-//        case .opponent: "player2Score"
-//        }
-        let key = "player1Score"
+        let key = switch player {
+        case .myself: "player1Score"
+        case .opponent: "player2Score"
+        }
         return store.integer(forKey: key)
     }
 }

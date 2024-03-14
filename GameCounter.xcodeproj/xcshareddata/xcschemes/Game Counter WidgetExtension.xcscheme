@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9979B4592BA10B1000FC2D9B"
-               BuildableName = "GameCounter WidgetExtension.appex"
-               BlueprintName = "GameCounter WidgetExtension"
+               BuildableName = "GameCounterWidgetExtension.appex"
+               BlueprintName = "GameCounterWidgetExtension"
                ReferencedContainer = "container:GameCounter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

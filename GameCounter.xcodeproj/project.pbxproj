@@ -11,7 +11,6 @@
 		99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */; };
 		99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
 		99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
-		99016ED02BA36FDC00B7D289 /* GameCounter WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6AF2B9E128200CFA3CC /* ContentView.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
@@ -26,19 +25,13 @@
 		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
+		99AF204E2BA37EF100E3099D /* GameCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99B95CF62BA376C2003F72F3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99B95CF52BA376C2003F72F3 /* ComposableArchitecture */; };
 		99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD0732B9E50940032AC0B /* SettingsView.swift */; };
 		99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		99016ED12BA36FDC00B7D289 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9979B4592BA10B1000FC2D9B;
-			remoteInfo = "Game Counter WidgetExtension";
-		};
 		9933B6BB2B9E128500CFA3CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
@@ -53,20 +46,16 @@
 			remoteGlobalIDString = 9933B6A92B9E128200CFA3CC;
 			remoteInfo = "Game Counter";
 		};
+		99AF204F2BA37EF100E3099D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9979B4592BA10B1000FC2D9B;
+			remoteInfo = GameCounterWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		99016ED32BA36FDC00B7D289 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				99016ED02BA36FDC00B7D289 /* GameCounter WidgetExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9979B4832BA1111400FC2D9B /* Embed ExtensionKit Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +64,17 @@
 			files = (
 			);
 			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AF20512BA37EF100E3099D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				99AF204E2BA37EF100E3099D /* GameCounterWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -92,7 +92,7 @@
 		9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITests.swift; sourceTree = "<group>"; };
 		9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9933B6D72B9E12C500CFA3CC /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GameCounter WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterWidgetBundle.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				9933B6AA2B9E128200CFA3CC /* GameCounter.app */,
 				9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */,
 				9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */,
-				9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */,
+				9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,12 +242,12 @@
 				9933B6A72B9E128200CFA3CC /* Frameworks */,
 				9933B6A82B9E128200CFA3CC /* Resources */,
 				9979B4832BA1111400FC2D9B /* Embed ExtensionKit Extensions */,
-				99016ED32BA36FDC00B7D289 /* Embed Foundation Extensions */,
+				99AF20512BA37EF100E3099D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				99016ED22BA36FDC00B7D289 /* PBXTargetDependency */,
+				99AF20502BA37EF100E3099D /* PBXTargetDependency */,
 			);
 			name = GameCounter;
 			packageProductDependencies = (
@@ -293,9 +293,9 @@
 			productReference = 9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */ = {
+		9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounter WidgetExtension" */;
+			buildConfigurationList = 9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounterWidgetExtension" */;
 			buildPhases = (
 				9979B4562BA10B1000FC2D9B /* Sources */,
 				9979B4572BA10B1000FC2D9B /* Frameworks */,
@@ -305,9 +305,9 @@
 			);
 			dependencies = (
 			);
-			name = "GameCounter WidgetExtension";
+			name = GameCounterWidgetExtension;
 			productName = "Game Counter WidgetExtension";
-			productReference = 9979B45A2BA10B1000FC2D9B /* GameCounter WidgetExtension.appex */;
+			productReference = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -355,7 +355,7 @@
 				9933B6A92B9E128200CFA3CC /* GameCounter */,
 				9933B6B92B9E128500CFA3CC /* GameCounterTests */,
 				9933B6C32B9E128500CFA3CC /* GameCounterUITests */,
-				9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */,
+				9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -441,11 +441,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		99016ED22BA36FDC00B7D289 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9979B4592BA10B1000FC2D9B /* GameCounter WidgetExtension */;
-			targetProxy = 99016ED12BA36FDC00B7D289 /* PBXContainerItemProxy */;
-		};
 		9933B6BC2B9E128500CFA3CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
@@ -455,6 +450,11 @@
 			isa = PBXTargetDependency;
 			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
 			targetProxy = 9933B6C52B9E128500CFA3CC /* PBXContainerItemProxy */;
+		};
+		99AF20502BA37EF100E3099D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */;
+			targetProxy = 99AF204F2BA37EF100E3099D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -584,6 +584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GameCounter/GameCounter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
@@ -605,6 +606,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -621,6 +623,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GameCounter/GameCounter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
@@ -642,6 +645,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -734,6 +738,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
@@ -750,6 +755,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -767,6 +773,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
@@ -783,6 +790,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.game-counter-app.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -833,7 +841,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounter WidgetExtension" */ = {
+		9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounterWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9979B46D2BA10B1200FC2D9B /* Debug */,
