@@ -3,16 +3,16 @@ import SwiftUI
 import WidgetKit
 
 enum Player: String {
-    case myself
-    case opponent
+    case player1 = "Player 1"
+    case player2 = "Player 2"
 }
 
 extension Player: AppEnum {
     static var typeDisplayRepresentation = TypeDisplayRepresentation(name: LocalizedStringResource(stringLiteral: "Player"))
     
     static var caseDisplayRepresentations: [Player : DisplayRepresentation] = [
-        .myself: "Myself",
-        .opponent: "Opponent"
+        .player1: "Player 1",
+        .player2: "Player 2"
     ]
 }
 
@@ -30,9 +30,9 @@ struct SnippetView: View {
 
     var body: some View {
         VStack {
-            Text("Opponent: \(player2)")
+            Text("Player 1: \(player1)")
                 .font(.title2)
-            Text("You: \(player1)")
+            Text("Player 2: \(player2)")
                 .font(.title2)
         }
     }
@@ -56,7 +56,7 @@ struct AddPointsIntent: AppIntent {
     func perform() async throws -> some IntentResult & ShowsSnippetView & ReturnsValue<Int> {
         let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
         switch player {
-        case .myself:
+        case .player1:
             let key = "player1Score"
             let score = store.integer(forKey: key)
             let score2 = store.integer(forKey: "player2Score")
@@ -66,7 +66,7 @@ struct AddPointsIntent: AppIntent {
             return .result(value: newScore) {
                 SnippetView(player1: newScore, player2: score2)
             }
-        case .opponent:
+        case .player2:
             let key = "player2Score"
             let score = store.integer(forKey: key)
             let score1 = store.integer(forKey: "player1Score")

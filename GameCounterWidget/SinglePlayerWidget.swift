@@ -25,8 +25,8 @@ struct SinglePlayerProvider: AppIntentTimelineProvider {
     private func getScore(player: Player) -> Int {
         let store = UserDefaults(suiteName: "group.com.garrett-harris.adam")!
         let key = switch player {
-        case .myself: "player1Score"
-        case .opponent: "player2Score"
+        case .player1: "player1Score"
+        case .player2: "player2Score"
         }
         return store.integer(forKey: key)
     }
@@ -47,7 +47,7 @@ struct SinglePlayerWidgetEntryView : View {
         switch family {
         case .systemSmall:
             VStack {
-                Text("\(entry.configuration.player)")
+                Text("\(entry.configuration.player.rawValue)")
                 Text("\(entry.score)")
                 HStack {
                     Button(intent: AddPointsIntent(player: entry.configuration.$player)) {
@@ -86,15 +86,15 @@ struct SinglePlayerWidget: Widget {
 }
 
 extension SinglePlayerConfigurationAppIntent {
-    fileprivate static var myself: SinglePlayerConfigurationAppIntent {
+    fileprivate static var player1: SinglePlayerConfigurationAppIntent {
         let intent = SinglePlayerConfigurationAppIntent()
-        intent.player = .myself
+        intent.player = .player1
         return intent
     }
     
-    fileprivate static var opponent: SinglePlayerConfigurationAppIntent {
+    fileprivate static var player2: SinglePlayerConfigurationAppIntent {
         let intent = SinglePlayerConfigurationAppIntent()
-        intent.player = .opponent
+        intent.player = .player2
         return intent
     }
 }
@@ -102,27 +102,27 @@ extension SinglePlayerConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
 
 #Preview(as: .accessoryCircular) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
 
 #Preview(as: .accessoryInline) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
 
 #Preview(as: .accessoryRectangular) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .myself)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .opponent)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
