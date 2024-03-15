@@ -12,17 +12,30 @@ struct AppFeature {
     struct State {
         @Presents var destination: Destination.State?
 
-        @Shared(.appStorage("player1Score")) var player1Score: Int = 0
-        @Shared(.appStorage("player2Score")) var player2Score: Int = 0
+        @Shared var player1Score: Int
+        @Shared var player2Score: Int
         @Shared(.appStorage("startingScore")) var startingScore: String = "0"
         
+        var player1Counter: CounterFeature.State
+        var player2Counter: CounterFeature.State
+
         var startingScoreInt: Int {
             Int(startingScore) ?? 0
+        }
+        
+        init(player1Score: Int = 1, player2Score: Int = 1) {
+            self.destination = nil
+            self._player1Score = Shared(wrappedValue: player1Score, .appStorage("player1Score"))
+            self._player2Score = Shared(wrappedValue: player2Score, .appStorage("player2Score"))
+            self._player1Counter = CounterFeature.State(score: self._player1Score)
+            self._player2Counter = CounterFeature.State(score: self._player2Score)
         }
     }
     
     enum Action {
         case destination(PresentationAction<Destination.Action>)
+        case player1Counter(CounterFeature.Action)
+        case player2Counter(CounterFeature.Action)
 
         case resetButtonTapped
         case settingsButtonTapped
@@ -36,9 +49,10 @@ struct AppFeature {
             case .resetButtonTapped:
                 state.player1Score = state.startingScoreInt
                 state.player2Score = state.startingScoreInt
-                return .run { _ in
+                return .run { [score1 = state.player1Score, score2 = state.player2Score] _ in
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
+                    announcer.announce(score1: score1, score2: score2)
                 }
             case .settingsButtonTapped:
                 state.destination = .settings(SettingsFeature.State(startingScore: state.$startingScore))
@@ -46,9 +60,28 @@ struct AppFeature {
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
                 }
+            case let .player1Counter(.delegate(action)),
+            let .player2Counter(.delegate(action)):
+                switch action {
+                case .onButtonTapped:
+                    return .run { [score1 = state.player1Score, score2 = state.player2Score] _ in
+                        announcer.announce(score1: score1, score2: score2)
+                    }
+                }
+            case .player1Counter:
+                return .none
+            case .player2Counter:
+                return .none
             }
         }
         .ifLet(\.$destination, action: \.destination)
+        
+        Scope(state: \.player1Counter, action: \.player1Counter) {
+            CounterFeature()
+        }
+        Scope(state: \.player2Counter, action: \.player2Counter) {
+            CounterFeature()
+        }
     }
 }
 
@@ -64,9 +97,7 @@ struct ContentView: View {
                     colorMode: .light,
                     playerName: "Player 2",
                     buttonColor: Color("LightBlue"),
-                    store: Store(initialState: CounterFeature.State(score: store.$player2Score)) {
-                        CounterFeature()
-                    }
+                    store: store.scope(state: \.player2Counter, action: \.player2Counter)
                 )
                 .rotationEffect(.degrees(-180))
                 
@@ -76,9 +107,7 @@ struct ContentView: View {
                     colorMode: .dark,
                     playerName: "Player 1",
                     buttonColor: Color("DarkBlue"),
-                    store: Store(initialState: CounterFeature.State(score: store.$player1Score)) {
-                        CounterFeature()
-                    }
+                    store: store.scope(state: \.player1Counter, action: \.player1Counter)
                 )
                 
                 HStack {
@@ -115,12 +144,6 @@ struct ContentView: View {
                     .presentationDetents([.medium, .large])
             }
         }
-        .onChange(of: store.player1Score) { _, _ in
-            announcer.announce(score1: store.player1Score, score2: store.player2Score)
-        }
-        .onChange(of: store.player2Score) { _, _ in
-            announcer.announce(score1: store.player1Score, score2: store.player2Score)
-        }
     }
 }
 
@@ -131,21 +154,15 @@ struct ScoreAnnouncer {
     var previousScore2: Int? = nil
 
     mutating func announce(score1: Int, score2: Int) {
-        // Don't announce it if it's the same as last time
-        // because when the score is reset, both scores change
-        // and can end up calling this function twice in a row
-        if previousScore1 != score1 || previousScore2 != score2 {
-            previousScore1 = score1
-            previousScore2 = score2
-            var announcement = AttributedString("\(score1) to \(score2)")
-            announcement.accessibilitySpeechAnnouncementPriority = .high
-            AccessibilityNotification.Announcement(announcement).post()
-        }
+        var announcement = AttributedString("\(score1) to \(score2)")
+        announcement.accessibilitySpeechAnnouncementPriority = .high
+        AccessibilityNotification.Announcement(announcement).post()
     }
 }
 
 #Preview {
-    ContentView(store: Store(initialState: AppFeature.State()) {
+    ContentView(store: Store(
+        initialState: AppFeature.State()) {
         AppFeature()
     })
 }

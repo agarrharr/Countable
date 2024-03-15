@@ -11,17 +11,26 @@ struct CounterFeature {
     
     enum Action {
         case buttonTapped(Int)
+        case delegate(Delegate)
+        
+        @CasePathable
+        enum Delegate {
+            case onButtonTapped
+        }
     }
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .delegate:
+                return .none
             case let .buttonTapped(amount):
                 state.score += amount
-                return .run { _ in
+                return .run { send in
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
                     WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
+                    await send(.delegate(.onButtonTapped))
                 }
             }
         }
