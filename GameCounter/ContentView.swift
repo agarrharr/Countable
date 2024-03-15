@@ -113,6 +113,30 @@ struct ContentView: View {
                     .presentationDetents([.medium, .large])
             }
         }
+        .onChange(of: store.player1Score) { _, _ in
+            announcer.announce(score1: store.player1Score, score2: store.player2Score)
+        }
+        .onChange(of: store.player2Score) { _, _ in
+            announcer.announce(score1: store.player1Score, score2: store.player2Score)
+        }
+    }
+}
+
+var announcer = ScoreAnnouncer()
+
+struct ScoreAnnouncer {
+    var announcement: AttributedString = ""
+    
+    mutating func announce(score1: Int, score2: Int) {
+        let newAnnouncement = AttributedString("\(score1) to \(score2)")
+        // Don't announce it if it's the same as last time
+        // because when the score is reset, both scores change
+        // and can end up calling this function twice in a row
+        if NSAttributedString(announcement).string != NSAttributedString(newAnnouncement).string {
+            announcement = newAnnouncement
+            announcement.accessibilitySpeechAnnouncementPriority = .high
+            AccessibilityNotification.Announcement(announcement).post()
+        }
     }
 }
 
