@@ -101,6 +101,7 @@ struct CounterView: View {
                 .font(Font.custom("Bitter-Regular", size: 150))
                 .minimumScaleFactor(0.01)
                 .foregroundStyle(primaryColor)
+                .accessibilityLabel("\(playerName): \(store.score)")
 
             Spacer()
                 .frame(height: 10)
