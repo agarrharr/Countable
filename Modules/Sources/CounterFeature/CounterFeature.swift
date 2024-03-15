@@ -1,6 +1,6 @@
 import ComposableArchitecture
-//import WidgetKit
 import UIKit
+import WidgetKit
 
 @Reducer
 public struct CounterFeature {
@@ -33,7 +33,7 @@ public struct CounterFeature {
                 return .run { send in
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
-//                    WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
+                    WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
                     await send(.delegate(.onButtonTapped))
                 }
             }
