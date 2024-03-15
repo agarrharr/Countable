@@ -52,6 +52,7 @@ struct SinglePlayerWidgetEntryView : View {
                 
                 Text("\(entry.score)")
                     .contentTransition(.numericText())
+                    .privacySensitive()
                 
                 HStack {
                     Button(
@@ -74,6 +75,18 @@ struct SinglePlayerWidgetEntryView : View {
                         Text("+")
                     }
                 }
+            }
+        case .accessoryCircular:
+            VStack {
+                Text("\(entry.score)")
+                Text("\(entry.configuration.player.rawValue)")
+            }
+        case .accessoryInline:
+            Text("\(entry.configuration.player.rawValue): \(entry.score) points")
+        case .accessoryRectangular:
+            VStack(alignment: .leading) {
+                Text("\(entry.configuration.player.rawValue)")
+                Text("\(entry.score)")
             }
         default:
             Text("\(entry.score)")
@@ -113,30 +126,30 @@ extension SinglePlayerConfigurationAppIntent {
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview("System Small", as: .systemSmall) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
 }
 
-#Preview(as: .accessoryCircular) {
+#Preview("Accessory Circular", as: .accessoryCircular) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
 }
 
-#Preview(as: .accessoryInline) {
+#Preview("Accessory Inline", as: .accessoryInline) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
 }
 
-#Preview(as: .accessoryRectangular) {
+#Preview("Accessory Rectangular", as: .accessoryRectangular) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
 }
