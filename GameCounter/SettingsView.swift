@@ -107,11 +107,11 @@ struct CloseSheetButton: View {
                 .imageScale(.medium)
                 .fontWeight(.bold)
                 .foregroundColor(.gray)
-                .padding(.all, 5)
+                .padding(5)
                 .background(Color.black.opacity(0.1))
                 .clipShape(Circle())
-                .accessibility(label:Text("Close"))
-                .accessibility(hint:Text("Tap to close the sheet"))
+                .accessibility(label: Text("Close"))
+                .accessibility(hint: Text("Double tap to close the sheet"))
         }
     }
 }
