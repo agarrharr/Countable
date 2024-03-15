@@ -125,15 +125,17 @@ struct ContentView: View {
 var announcer = ScoreAnnouncer()
 
 struct ScoreAnnouncer {
-    var announcement: AttributedString = ""
-    
+    var previousScore1: Int? = nil
+    var previousScore2: Int? = nil
+
     mutating func announce(score1: Int, score2: Int) {
-        let newAnnouncement = AttributedString("\(score1) to \(score2)")
         // Don't announce it if it's the same as last time
         // because when the score is reset, both scores change
         // and can end up calling this function twice in a row
-        if NSAttributedString(announcement).string != NSAttributedString(newAnnouncement).string {
-            announcement = newAnnouncement
+        if previousScore1 != score1 || previousScore2 != score2 {
+            previousScore1 = score1
+            previousScore2 = score2
+            var announcement = AttributedString("\(score1) to \(score2)")
             announcement.accessibilitySpeechAnnouncementPriority = .high
             AccessibilityNotification.Announcement(announcement).post()
         }
