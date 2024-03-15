@@ -1,94 +1,12 @@
 import ComposableArchitecture
 import SwiftUI
-import WidgetKit
 
-@Reducer
-struct CounterFeature {
-    @ObservableState
-    struct State {
-        @Shared var score: Int
-    }
-    
-    enum Action {
-        case buttonTapped(Int)
-        case delegate(Delegate)
-        
-        @CasePathable
-        enum Delegate {
-            case onButtonTapped
-        }
-    }
-    
-    public var body: some ReducerOf<Self> {
-        Reduce { state, action in
-            switch action {
-            case .delegate:
-                return .none
-            case let .buttonTapped(amount):
-                state.score += amount
-                return .run { send in
-                    let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
-                    await impactFeedback.impactOccurred()
-                    WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
-                    await send(.delegate(.onButtonTapped))
-                }
-            }
-        }
-    }
-}
-
-enum ColorMode {
+public enum ColorMode {
     case light
     case dark
 }
 
-extension LinearGradient {
-    init(_ colors: Color...) {
-        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
-}
-
-struct SimpleButtonStyle: ButtonStyle {
-    let buttonColor: Color
-
-    init(buttonColor: Color) {
-        self.buttonColor = buttonColor
-    }
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .background(
-                Group {
-                    if configuration.isPressed {
-                        Circle()
-                            .fill(buttonColor)
-                            .overlay(
-                                Circle()
-                                    .stroke(.black.opacity(0.2), lineWidth: 4)
-                                    .blur(radius: 4)
-                                    .offset(x: 2, y: 2)
-                                    .mask(Circle().fill(LinearGradient(.black, .clear)))
-                            )
-                            .overlay(
-                                Circle()
-                                    .stroke(.white.opacity(0.2), lineWidth: 4)
-                                    .blur(radius: 4)
-                                    .offset(x: -1, y: -1)
-                                    .mask(Circle().fill(LinearGradient(.clear, .black)))
-                            )
-                    } else {
-                        Circle()
-                            .fill(buttonColor)
-                            .shadow(color: .black.opacity(0.2), radius: 5, x: 4, y: 4)
-                            .shadow(color: .white.opacity(0.2), radius: 5, x: 0, y: -1)
-                    }
-                }
-            )
-    }
-}
-
-struct CounterView: View {
+public struct CounterView: View {
     var colorMode: ColorMode
     var playerName: String
     var buttonColor: Color
@@ -103,7 +21,14 @@ struct CounterView: View {
         }
     }
     
-    var body: some View {
+    public init(colorMode: ColorMode, playerName: String, buttonColor: Color, store: StoreOf<CounterFeature>) {
+        self.colorMode = colorMode
+        self.playerName = playerName
+        self.buttonColor = buttonColor
+        self.store = store
+    }
+    
+    public var body: some View {
         VStack {
             Text("\(store.score)")
                 .padding()

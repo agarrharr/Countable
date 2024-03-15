@@ -1,6 +1,8 @@
 import ComposableArchitecture
 import SwiftUI
 
+import CounterFeature
+
 @Reducer
 struct AppFeature {
     @Reducer
