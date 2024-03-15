@@ -29,6 +29,7 @@ struct SettingsView: View {
     @State private var showList: Bool = false
     @FocusState var isInputActive: Bool
     
+    @Environment(\.dismiss) var dismiss
     @Environment(\.sizeCategory) var sizeCategory
     
     public var body: some View {
@@ -43,6 +44,7 @@ struct SettingsView: View {
                                     .background(.blue)
                                     .foregroundColor(.white)
                                     .clipShape(RoundedRectangle(cornerRadius: self.cornerRadius))
+                                    .accessibilityHidden(true)
                                 LabeledContent {
                                     TextField("Starting Score", text: $store.startingScore)
                                         .multilineTextAlignment(.trailing)
@@ -70,6 +72,13 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    CloseSheetButton() {
+                        dismiss()
+                    }
+                }
+            }
         }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -86,6 +95,28 @@ struct SettingsView: View {
         }
     }
 }
+
+struct CloseSheetButton: View {
+    let callback: () -> Void
+    
+    var body: some View {
+        Button {
+            callback()
+        } label: {
+            Image(systemName: "xmark")
+                .imageScale(.medium)
+                .fontWeight(.bold)
+                .foregroundColor(.gray)
+                .padding(.all, 5)
+                .background(Color.black.opacity(0.1))
+                .clipShape(Circle())
+                .accessibility(label:Text("Close"))
+                .accessibility(hint:Text("Tap to close the sheet"))
+        }
+    }
+}
+
+
 
 #Preview {
     SettingsView(store: Store(initialState: SettingsFeature.State(startingScore: Shared("0"))) {
