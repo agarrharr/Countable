@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "GameCounter",
+    name: "Countable",
     platforms: [.iOS(.v17)],
     products: [
         .library(

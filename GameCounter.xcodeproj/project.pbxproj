@@ -24,6 +24,13 @@
 		99AF206E2BA4D7E600E3099D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */; };
 		99CBDBEB2BA4E3930008954E /* GameCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99CBDBF22BA507840008954E /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99CBDBF12BA507840008954E /* AppFeature */; };
+		99CBDBF42BA5092F0008954E /* SubtractPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */; };
+		99CBDBF62BA5099F0008954E /* CountableAppShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */; };
+		99CBDBF82BA509D10008954E /* ShortcutsSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */; };
+		99CBDBFA2BA50A1B0008954E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF92BA50A1B0008954E /* Player.swift */; };
+		99CBDBFB2BA50C0E0008954E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF92BA50A1B0008954E /* Player.swift */; };
+		99CBDBFC2BA50C190008954E /* SubtractPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */; };
+		99CBDBFD2BA50C260008954E /* ShortcutsSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */; };
 		99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +104,10 @@
 		9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounter.entitlements; sourceTree = "<group>"; };
 		9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointsIntent.swift; sourceTree = "<group>"; };
 		99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractPointsIntent.swift; sourceTree = "<group>"; };
+		99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableAppShortcuts.swift; sourceTree = "<group>"; };
+		99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsSnippetView.swift; sourceTree = "<group>"; };
+		99CBDBF92BA50A1B0008954E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameCounter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +181,10 @@
 				9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */,
 				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
 				99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */,
+				99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */,
+				99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */,
+				99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */,
+				99CBDBF92BA50A1B0008954E /* Player.swift */,
 			);
 			path = GameCounter;
 			sourceTree = "<group>";
@@ -328,7 +343,6 @@
 			);
 			mainGroup = 9933B6A12B9E128200CFA3CC;
 			packageReferences = (
-				99DFD06F2B9E2A530032AC0B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 9933B6AB2B9E128200CFA3CC /* Products */;
 			projectDirPath = "";
@@ -382,9 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CBDBF42BA5092F0008954E /* SubtractPointsIntent.swift in Sources */,
 				99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */,
 				99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */,
 				99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */,
+				99CBDBFA2BA50A1B0008954E /* Player.swift in Sources */,
+				99CBDBF82BA509D10008954E /* ShortcutsSnippetView.swift in Sources */,
+				99CBDBF62BA5099F0008954E /* CountableAppShortcuts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,9 +427,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CBDBFC2BA50C190008954E /* SubtractPointsIntent.swift in Sources */,
 				99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */,
 				9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */,
 				9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */,
+				99CBDBFB2BA50C0E0008954E /* Player.swift in Sources */,
+				99CBDBFD2BA50C260008954E /* ShortcutsSnippetView.swift in Sources */,
 				9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,17 +852,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		99DFD06F2B9E2A530032AC0B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
-			requirement = {
-				branch = "shared-state-beta";
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		99CBDBF12BA507840008954E /* AppFeature */ = {
