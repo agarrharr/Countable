@@ -70,6 +70,8 @@ struct ContentView: View {
                 )
                 .rotationEffect(.degrees(-180))
                 
+                Spacer()
+                
                 CounterView(
                     colorMode: .dark,
                     playerName: "Player 1",

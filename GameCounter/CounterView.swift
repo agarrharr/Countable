@@ -97,14 +97,13 @@ struct CounterView: View {
     var body: some View {
         VStack {
             Text("\(store.score)")
-                .padding(40)
-                .font(Font.custom("Bitter-Regular", size: 150))
-                .minimumScaleFactor(0.01)
+                .padding()
+                .font(Font.custom("Bitter-Regular", size: 90))
+                .minimumScaleFactor(0.3)
                 .foregroundStyle(primaryColor)
                 .accessibilityLabel("\(playerName): \(store.score)")
-
+            
             Spacer()
-                .frame(height: 10)
 
             HStack {
                 Spacer()
