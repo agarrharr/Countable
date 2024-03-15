@@ -2,6 +2,7 @@ import ComposableArchitecture
 import SwiftUI
 
 import CounterFeature
+import SettingsFeature
 
 @Reducer
 struct AppFeature {

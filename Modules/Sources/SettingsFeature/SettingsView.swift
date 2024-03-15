@@ -1,23 +1,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-@Reducer
-struct SettingsFeature {
-    @ObservableState
-    struct State: Equatable {
-        @Shared var startingScore: String
-    }
-    
-    enum Action: BindableAction, Sendable {
-        case binding(BindingAction<State>)
-    }
-    
-    public var body: some ReducerOf<Self> {
-        BindingReducer()
-    }
-}
-
-struct SettingsView: View {
+public struct SettingsView: View {
    @Bindable var store: StoreOf<SettingsFeature>
     
     // Why am I initially hiding the list?
@@ -31,6 +15,10 @@ struct SettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     @Environment(\.sizeCategory) var sizeCategory
+    
+    public init(store: StoreOf<SettingsFeature>) {
+        self.store = store
+    }
     
     public var body: some View {
         NavigationStack {
@@ -95,28 +83,6 @@ struct SettingsView: View {
         }
     }
 }
-
-struct CloseSheetButton: View {
-    let callback: () -> Void
-    
-    var body: some View {
-        Button {
-            callback()
-        } label: {
-            Image(systemName: "xmark")
-                .imageScale(.medium)
-                .fontWeight(.bold)
-                .foregroundColor(.gray)
-                .padding(5)
-                .background(Color.black.opacity(0.1))
-                .clipShape(Circle())
-                .accessibility(label: Text("Close"))
-                .accessibility(hint: Text("Double tap to close the sheet"))
-        }
-    }
-}
-
-
 
 #Preview {
     SettingsView(store: Store(initialState: SettingsFeature.State(startingScore: Shared("0"))) {

@@ -8,7 +8,12 @@ let package = Package(
     products: [
         .library(
             name: "CounterFeature",
-            targets: ["CounterFeature"]),
+            targets: ["CounterFeature"]
+        ),
+        .library(
+            name: "SettingsFeature",
+            targets: ["SettingsFeature"]
+        ),
     ],
     dependencies: [
         // .package(url: "https://www.github.com/pointfreeco/swift-composable-architecture", from: "1.8.2"),
@@ -23,6 +28,13 @@ let package = Package(
         ),
         .testTarget(
             name: "CounterFeatureTests",
-            dependencies: ["CounterFeature"]),
+            dependencies: ["CounterFeature"]
+        ),
+        .target(
+            name: "SettingsFeature",
+            dependencies: [
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
     ]
 )

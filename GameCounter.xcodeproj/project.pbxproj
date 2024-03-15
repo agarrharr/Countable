@@ -28,7 +28,7 @@
 		99AF206E2BA4D7E600E3099D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */; };
 		99B95CF62BA376C2003F72F3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 99B95CF52BA376C2003F72F3 /* ComposableArchitecture */; };
 		99CBDBEB2BA4E3930008954E /* GameCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DFD0732B9E50940032AC0B /* SettingsView.swift */; };
+		99CBDBF02BA4ED230008954E /* SettingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99CBDBEF2BA4ED230008954E /* SettingsFeature */; };
 		99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +105,6 @@
 		9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounter.entitlements; sourceTree = "<group>"; };
 		9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointsIntent.swift; sourceTree = "<group>"; };
 		99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		99DFD0732B9E50940032AC0B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameCounter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9973B1C32BA4DCA200B63BAC /* CounterFeature in Frameworks */,
+				99CBDBF02BA4ED230008954E /* SettingsFeature in Frameworks */,
 				99B95CF62BA376C2003F72F3 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +179,6 @@
 				9933B6AF2B9E128200CFA3CC /* ContentView.swift */,
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
 				9933B6B32B9E128500CFA3CC /* Preview Content */,
-				99DFD0732B9E50940032AC0B /* SettingsView.swift */,
 				9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */,
 				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
 				99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */,
@@ -257,6 +256,7 @@
 			packageProductDependencies = (
 				99B95CF52BA376C2003F72F3 /* ComposableArchitecture */,
 				9973B1C22BA4DCA200B63BAC /* CounterFeature */,
+				99CBDBEF2BA4ED230008954E /* SettingsFeature */,
 			);
 			productName = "Game Counter";
 			productReference = 9933B6AA2B9E128200CFA3CC /* GameCounter.app */;
@@ -407,7 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99016ECD2BA22D5200B7D289 /* GradientBackgroundView.swift in Sources */,
-				99DFD0742B9E50940032AC0B /* SettingsView.swift in Sources */,
 				99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */,
 				9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */,
 				99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */,
@@ -879,6 +878,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99DFD06F2B9E2A530032AC0B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		99CBDBEF2BA4ED230008954E /* SettingsFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
