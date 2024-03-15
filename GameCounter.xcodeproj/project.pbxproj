@@ -14,7 +14,6 @@
 		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9933B6B02B9E128200CFA3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6AF2B9E128200CFA3CC /* ContentView.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
-		9933B6B52B9E128500CFA3CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */; };
 		9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */; };
 		9933B6C92B9E128500CFA3CC /* GameCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */; };
 		9933B6CB2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */; };
@@ -86,7 +85,6 @@
 		9933B6AA2B9E128200CFA3CC /* GameCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6AF2B9E128200CFA3CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterTests.swift; sourceTree = "<group>"; };
 		9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,21 +176,12 @@
 				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
 				9933B6AF2B9E128200CFA3CC /* ContentView.swift */,
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
-				9933B6B32B9E128500CFA3CC /* Preview Content */,
 				9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */,
 				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
 				99016ECC2BA22D5200B7D289 /* GradientBackgroundView.swift */,
 				99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */,
 			);
 			path = GameCounter;
-			sourceTree = "<group>";
-		};
-		9933B6B32B9E128500CFA3CC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9933B6B42B9E128500CFA3CC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9933B6BD2B9E128500CFA3CC /* GameCounterTests */ = {
@@ -371,7 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99DFD07A2B9E6A1B0032AC0B /* Bitter-Regular.ttf in Resources */,
-				9933B6B52B9E128500CFA3CC /* Preview Assets.xcassets in Resources */,
 				99AF206E2BA4D7E600E3099D /* PrivacyInfo.xcprivacy in Resources */,
 				9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */,
 			);
@@ -591,7 +579,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -631,7 +619,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GameCounter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
