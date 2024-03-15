@@ -5,14 +5,14 @@ import CounterFeature
 import SettingsFeature
 
 @Reducer
-struct AppFeature {
+public struct AppFeature {
     @Reducer
-    enum Destination {
+    public enum Destination {
         case settings(SettingsFeature)
     }
     
     @ObservableState
-    struct State {
+    public struct State {
         @Presents var destination: Destination.State?
 
         @Shared var player1Score: Int
@@ -26,7 +26,7 @@ struct AppFeature {
             Int(startingScore) ?? 0
         }
         
-        init(player1Score: Int = 1, player2Score: Int = 1) {
+        public init(player1Score: Int = 1, player2Score: Int = 1) {
             self.destination = nil
             self._player1Score = Shared(wrappedValue: player1Score, .appStorage("player1Score"))
             self._player2Score = Shared(wrappedValue: player2Score, .appStorage("player2Score"))
@@ -35,7 +35,7 @@ struct AppFeature {
         }
     }
     
-    enum Action {
+    public enum Action {
         case destination(PresentationAction<Destination.Action>)
         case player1Counter(CounterFeature.Action)
         case player2Counter(CounterFeature.Action)
@@ -86,68 +86,8 @@ struct AppFeature {
             CounterFeature()
         }
     }
-}
-
-
-struct ContentView: View {
-    @Bindable var store: StoreOf<AppFeature>
     
-    var body: some View {
-        ZStack {
-            GradientBackgroundView()
-            VStack {
-                CounterView(
-                    colorMode: .light,
-                    playerName: "Player 2",
-                    buttonColor: Color("LightBlue"),
-                    store: store.scope(state: \.player2Counter, action: \.player2Counter)
-                )
-                .rotationEffect(.degrees(-180))
-                
-                Spacer()
-                
-                CounterView(
-                    colorMode: .dark,
-                    playerName: "Player 1",
-                    buttonColor: Color("DarkBlue"),
-                    store: store.scope(state: \.player1Counter, action: \.player1Counter)
-                )
-                
-                HStack {
-                    Button {
-                        store.send(.resetButtonTapped)
-                    } label: {
-                        Image(systemName: "arrow.circlepath")
-                            .foregroundColor(.white)
-                            .imageScale(.large)
-                            .accessibilityLabel("Reset")
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
-                        store.send(.settingsButtonTapped)
-                    } label: {
-                        Image(systemName: "gear")
-                            .foregroundColor(.white)
-                            .imageScale(.large)
-                            .accessibilityLabel("Settings")
-                    }
-                }
-            }
-            .padding()
-            .sheet(
-                item: $store.scope(
-                    state: \.destination?.settings,
-                    action: \.destination.settings
-                )
-            ) { store in
-                SettingsView(store: store)
-                    .presentationDragIndicator(.visible)
-                    .presentationDetents([.medium, .large])
-            }
-        }
-    }
+    public init() {}
 }
 
 var announcer = ScoreAnnouncer()
@@ -161,11 +101,4 @@ struct ScoreAnnouncer {
         announcement.accessibilitySpeechAnnouncementPriority = .high
         AccessibilityNotification.Announcement(announcement).post()
     }
-}
-
-#Preview {
-    ContentView(store: Store(
-        initialState: AppFeature.State()) {
-        AppFeature()
-    })
 }

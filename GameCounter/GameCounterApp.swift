@@ -1,6 +1,8 @@
 import ComposableArchitecture
 import SwiftUI
 
+import AppFeature
+
 extension UserDefaults {
     static var shared: UserDefaults {
         return UserDefaults(suiteName: "group.com.garrett-harris.adam")!
@@ -17,7 +19,7 @@ struct GameCounterApp: App {
                 $0.defaultAppStorage = UserDefaults.shared
             }
             
-            ContentView(store: store)
+            AppView(store: store)
             .onAppear {
                 // Keep the screen on
                 UIApplication.shared.isIdleTimerDisabled = true
