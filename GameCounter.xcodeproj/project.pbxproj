@@ -174,17 +174,13 @@
 		9933B6AC2B9E128200CFA3CC /* GameCounter */ = {
 			isa = PBXGroup;
 			children = (
-				9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */,
-				99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */,
-				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
+				9940490C2BA51BB0001A2984 /* AppIntents */,
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
-				9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */,
+				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
+				9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */,
 				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
+				99DFD0782B9E673E0032AC0B /* GameCounter-Info.plist */,
 				99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */,
-				99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */,
-				99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */,
-				99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */,
-				99CBDBF92BA50A1B0008954E /* Player.swift */,
 			);
 			path = GameCounter;
 			sourceTree = "<group>";
@@ -204,6 +200,18 @@
 				9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */,
 			);
 			path = GameCounterUITests;
+			sourceTree = "<group>";
+		};
+		9940490C2BA51BB0001A2984 /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */,
+				99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */,
+				99CBDBF92BA50A1B0008954E /* Player.swift */,
+				99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */,
+				99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */,
+			);
+			path = AppIntents;
 			sourceTree = "<group>";
 		};
 		9979B45F2BA10B1100FC2D9B /* GameCounterWidget */ = {
