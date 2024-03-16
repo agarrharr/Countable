@@ -10,7 +10,7 @@ extension UserDefaults {
 }
 
 @main
-struct GameCounterApp: App {
+struct CountableApp: App {
     let store: StoreOf<AppFeature> = Store(initialState: AppFeature.State()) {
         AppFeature()._printChanges()
     } withDependencies: {

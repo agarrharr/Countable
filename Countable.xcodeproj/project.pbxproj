@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */; };
+		99016ECB2BA22D3900B7D289 /* CountableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99016ECA2BA22D3900B7D289 /* CountableApp.swift */; };
 		99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
 		99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
 		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
+		99297B362BA655E7004BAE5E /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99297B352BA655E7004BAE5E /* AppFeature */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
 		9933B6BF2B9E128500CFA3CC /* CountableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* CountableTests.swift */; };
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
-		9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */; };
+		9979B4612BA10B1100FC2D9B /* CountableWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* CountableWidgetBundle.swift */; };
 		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
-		99984CC32BA6188E004EACCA /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CC22BA6188E004EACCA /* AppFeature */; };
 		99984CCD2BA61BD9004EACCA /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CCC2BA61BD9004EACCA /* RealityKitContent */; };
 		99984CCF2BA61BD9004EACCA /* CountableVisionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */; };
 		99984CD12BA61BD9004EACCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CD02BA61BD9004EACCA /* ContentView.swift */; };
@@ -80,7 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterApp.swift; sourceTree = "<group>"; };
+		99016ECA2BA22D3900B7D289 /* CountableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableApp.swift; sourceTree = "<group>"; };
 		9933B6AA2B9E128200CFA3CC /* Countable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9933B6BA2B9E128500CFA3CC /* CountableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,12 +89,12 @@
 		9979B45A2BA10B1000FC2D9B /* CountableWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CountableWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterWidgetBundle.swift; sourceTree = "<group>"; };
+		9979B4602BA10B1100FC2D9B /* CountableWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableWidgetBundle.swift; sourceTree = "<group>"; };
 		9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerWidget.swift; sourceTree = "<group>"; };
 		9979B4642BA10B1100FC2D9B /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		9979B4662BA10B1200FC2D9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9979B4682BA10B1200FC2D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9979B4702BA10D0200FC2D9B /* GameCounterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounterWidgetExtension.entitlements; sourceTree = "<group>"; };
+		9979B4702BA10D0200FC2D9B /* CountableWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountableWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9979B4712BA10D3900FC2D9B /* Countable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countable.entitlements; sourceTree = "<group>"; };
 		9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointsIntent.swift; sourceTree = "<group>"; };
 		99984CC82BA61BD8004EACCA /* CountableVisionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountableVisionOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99984CC32BA6188E004EACCA /* AppFeature in Frameworks */,
+				99297B362BA655E7004BAE5E /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +156,7 @@
 				9973B1C12BA4DB0900B63BAC /* Modules */,
 				9933B6AC2B9E128200CFA3CC /* Countable */,
 				9933B6BD2B9E128500CFA3CC /* CountableTests */,
-				9979B45F2BA10B1100FC2D9B /* GameCounterWidget */,
+				9979B45F2BA10B1100FC2D9B /* CountableWidget */,
 				99984CC92BA61BD9004EACCA /* CountableVisionOS */,
 				99984CCA2BA61BD9004EACCA /* Packages */,
 				9933B6AB2B9E128200CFA3CC /* Products */,
@@ -182,7 +182,7 @@
 				9933B6B12B9E128500CFA3CC /* Assets.xcassets */,
 				99DFD0792B9E68EE0032AC0B /* Bitter-Regular.ttf */,
 				9979B4712BA10D3900FC2D9B /* Countable.entitlements */,
-				99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */,
+				99016ECA2BA22D3900B7D289 /* CountableApp.swift */,
 				99DFD0782B9E673E0032AC0B /* Countable-Info.plist */,
 				99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */,
 			);
@@ -209,17 +209,17 @@
 			path = AppIntents;
 			sourceTree = "<group>";
 		};
-		9979B45F2BA10B1100FC2D9B /* GameCounterWidget */ = {
+		9979B45F2BA10B1100FC2D9B /* CountableWidget */ = {
 			isa = PBXGroup;
 			children = (
-				9979B4702BA10D0200FC2D9B /* GameCounterWidgetExtension.entitlements */,
-				9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */,
+				9979B4702BA10D0200FC2D9B /* CountableWidgetExtension.entitlements */,
+				9979B4602BA10B1100FC2D9B /* CountableWidgetBundle.swift */,
 				9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */,
 				9979B4642BA10B1100FC2D9B /* AppIntent.swift */,
 				9979B4662BA10B1200FC2D9B /* Assets.xcassets */,
 				9979B4682BA10B1200FC2D9B /* Info.plist */,
 			);
-			path = GameCounterWidget;
+			path = CountableWidget;
 			sourceTree = "<group>";
 		};
 		99984CC92BA61BD9004EACCA /* CountableVisionOS */ = {
@@ -279,7 +279,7 @@
 			);
 			name = Countable;
 			packageProductDependencies = (
-				99984CC22BA6188E004EACCA /* AppFeature */,
+				99297B352BA655E7004BAE5E /* AppFeature */,
 			);
 			productName = "Game Counter";
 			productReference = 9933B6AA2B9E128200CFA3CC /* Countable.app */;
@@ -434,7 +434,7 @@
 				99CBDBF42BA5092F0008954E /* SubtractPointsIntent.swift in Sources */,
 				99016ECE2BA36DE800B7D289 /* AddPointsIntent.swift in Sources */,
 				99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */,
-				99016ECB2BA22D3900B7D289 /* GameCounterApp.swift in Sources */,
+				99016ECB2BA22D3900B7D289 /* CountableApp.swift in Sources */,
 				99CBDBFA2BA50A1B0008954E /* Player.swift in Sources */,
 				99CBDBF82BA509D10008954E /* ShortcutsSnippetView.swift in Sources */,
 				99CBDBF62BA5099F0008954E /* CountableAppShortcuts.swift in Sources */,
@@ -456,7 +456,7 @@
 				99CBDBFC2BA50C190008954E /* SubtractPointsIntent.swift in Sources */,
 				99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */,
 				9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */,
-				9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */,
+				9979B4612BA10B1100FC2D9B /* CountableWidgetBundle.swift in Sources */,
 				99CBDBFB2BA50C0E0008954E /* Player.swift in Sources */,
 				99CBDBFD2BA50C260008954E /* ShortcutsSnippetView.swift in Sources */,
 				9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */,
@@ -732,13 +732,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CountableWidget/CountableWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GameCounterWidget/Info.plist;
+				INFOPLIST_FILE = CountableWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GameCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -767,13 +767,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = GameCounterWidget/GameCounterWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CountableWidget/CountableWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 47C966XSTJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GameCounterWidget/Info.plist;
+				INFOPLIST_FILE = CountableWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = GameCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -904,7 +904,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		99984CC22BA6188E004EACCA /* AppFeature */ = {
+		99297B352BA655E7004BAE5E /* AppFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFeature;
 		};
