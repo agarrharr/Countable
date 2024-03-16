@@ -20,7 +20,6 @@
 		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
-		99984CCD2BA61BD9004EACCA /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CCC2BA61BD9004EACCA /* RealityKitContent */; };
 		99984CCF2BA61BD9004EACCA /* CountableVisionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */; };
 		99984CD12BA61BD9004EACCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CD02BA61BD9004EACCA /* ContentView.swift */; };
 		99984CD32BA61BDA004EACCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99984CD22BA61BDA004EACCA /* Assets.xcassets */; };
@@ -142,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99984CCD2BA61BD9004EACCA /* RealityKitContent in Frameworks */,
 				99984CDC2BA61BE9004EACCA /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +332,6 @@
 			);
 			name = CountableVisionOS;
 			packageProductDependencies = (
-				99984CCC2BA61BD9004EACCA /* RealityKitContent */,
 				99984CDB2BA61BE9004EACCA /* AppFeature */,
 			);
 			productName = CountableVisionOS;
@@ -907,10 +904,6 @@
 		99297B352BA655E7004BAE5E /* AppFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFeature;
-		};
-		99984CCC2BA61BD9004EACCA /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
 		};
 		99984CDB2BA61BE9004EACCA /* AppFeature */ = {
 			isa = XCSwiftPackageProductDependency;
