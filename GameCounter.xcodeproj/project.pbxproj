@@ -12,7 +12,7 @@
 		99016ECF2BA36DE900B7D289 /* AddPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */; };
 		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
-		9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */; };
+		9933B6BF2B9E128500CFA3CC /* CountableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* CountableTests.swift */; };
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
 		9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */; };
@@ -83,8 +83,8 @@
 		99016ECA2BA22D3900B7D289 /* GameCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterApp.swift; sourceTree = "<group>"; };
 		9933B6AA2B9E128200CFA3CC /* GameCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterTests.swift; sourceTree = "<group>"; };
+		9933B6BA2B9E128500CFA3CC /* CountableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9933B6BE2B9E128500CFA3CC /* CountableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableTests.swift; sourceTree = "<group>"; };
 		9973B1C12BA4DB0900B63BAC /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -155,7 +155,7 @@
 			children = (
 				9973B1C12BA4DB0900B63BAC /* Modules */,
 				9933B6AC2B9E128200CFA3CC /* GameCounter */,
-				9933B6BD2B9E128500CFA3CC /* GameCounterTests */,
+				9933B6BD2B9E128500CFA3CC /* CountableTests */,
 				9979B45F2BA10B1100FC2D9B /* GameCounterWidget */,
 				99984CC92BA61BD9004EACCA /* CountableVisionOS */,
 				99984CCA2BA61BD9004EACCA /* Packages */,
@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				9933B6AA2B9E128200CFA3CC /* GameCounter.app */,
-				9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */,
+				9933B6BA2B9E128500CFA3CC /* CountableTests.xctest */,
 				9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */,
 				99984CC82BA61BD8004EACCA /* CountableVisionOS.app */,
 			);
@@ -189,12 +189,12 @@
 			path = GameCounter;
 			sourceTree = "<group>";
 		};
-		9933B6BD2B9E128500CFA3CC /* GameCounterTests */ = {
+		9933B6BD2B9E128500CFA3CC /* CountableTests */ = {
 			isa = PBXGroup;
 			children = (
-				9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */,
+				9933B6BE2B9E128500CFA3CC /* CountableTests.swift */,
 			);
-			path = GameCounterTests;
+			path = CountableTests;
 			sourceTree = "<group>";
 		};
 		9940490C2BA51BB0001A2984 /* AppIntents */ = {
@@ -285,9 +285,9 @@
 			productReference = 9933B6AA2B9E128200CFA3CC /* GameCounter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9933B6B92B9E128500CFA3CC /* GameCounterTests */ = {
+		9933B6B92B9E128500CFA3CC /* CountableTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterTests" */;
+			buildConfigurationList = 9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "CountableTests" */;
 			buildPhases = (
 				9933B6B62B9E128500CFA3CC /* Sources */,
 				9933B6B72B9E128500CFA3CC /* Frameworks */,
@@ -298,9 +298,9 @@
 			dependencies = (
 				9933B6BC2B9E128500CFA3CC /* PBXTargetDependency */,
 			);
-			name = GameCounterTests;
+			name = CountableTests;
 			productName = "Game CounterTests";
-			productReference = 9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */;
+			productReference = 9933B6BA2B9E128500CFA3CC /* CountableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */ = {
@@ -382,7 +382,7 @@
 			projectRoot = "";
 			targets = (
 				9933B6A92B9E128200CFA3CC /* GameCounter */,
-				9933B6B92B9E128500CFA3CC /* GameCounterTests */,
+				9933B6B92B9E128500CFA3CC /* CountableTests */,
 				9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */,
 				99984CC72BA61BD8004EACCA /* CountableVisionOS */,
 			);
@@ -445,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */,
+				9933B6BF2B9E128500CFA3CC /* CountableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,7 +874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterTests" */ = {
+		9933B6D12B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "CountableTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9933B6D22B9E128500CFA3CC /* Debug */,

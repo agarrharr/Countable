@@ -36,8 +36,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9933B6B92B9E128500CFA3CC"
-               BuildableName = "GameCounterTests.xctest"
-               BlueprintName = "GameCounterTests"
+               BuildableName = "CountableTests.xctest"
+               BlueprintName = "CountableTests"
                ReferencedContainer = "container:GameCounter.xcodeproj">
             </BuildableReference>
          </TestableReference>
