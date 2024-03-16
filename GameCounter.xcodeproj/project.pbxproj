@@ -13,8 +13,6 @@
 		99016ED42BA371A100B7D289 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
 		9933B6BF2B9E128500CFA3CC /* GameCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */; };
-		9933B6C92B9E128500CFA3CC /* GameCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */; };
-		9933B6CB2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */; };
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
 		9979B4612BA10B1100FC2D9B /* GameCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* GameCounterWidgetBundle.swift */; };
@@ -42,13 +40,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		9933B6BB2B9E128500CFA3CC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9933B6A92B9E128200CFA3CC;
-			remoteInfo = "Game Counter";
-		};
-		9933B6C52B9E128500CFA3CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9933B6A22B9E128200CFA3CC /* Project object */;
 			proxyType = 1;
@@ -94,9 +85,6 @@
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterTests.swift; sourceTree = "<group>"; };
-		9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITests.swift; sourceTree = "<group>"; };
-		9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9973B1C12BA4DB0900B63BAC /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -141,13 +129,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9933B6C12B9E128500CFA3CC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9979B4572BA10B1000FC2D9B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,7 +156,6 @@
 				9973B1C12BA4DB0900B63BAC /* Modules */,
 				9933B6AC2B9E128200CFA3CC /* GameCounter */,
 				9933B6BD2B9E128500CFA3CC /* GameCounterTests */,
-				9933B6C72B9E128500CFA3CC /* GameCounterUITests */,
 				9979B45F2BA10B1100FC2D9B /* GameCounterWidget */,
 				99984CC92BA61BD9004EACCA /* CountableVisionOS */,
 				99984CCA2BA61BD9004EACCA /* Packages */,
@@ -189,7 +169,6 @@
 			children = (
 				9933B6AA2B9E128200CFA3CC /* GameCounter.app */,
 				9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */,
-				9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */,
 				9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */,
 				99984CC82BA61BD8004EACCA /* CountableVisionOS.app */,
 			);
@@ -216,15 +195,6 @@
 				9933B6BE2B9E128500CFA3CC /* GameCounterTests.swift */,
 			);
 			path = GameCounterTests;
-			sourceTree = "<group>";
-		};
-		9933B6C72B9E128500CFA3CC /* GameCounterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9933B6C82B9E128500CFA3CC /* GameCounterUITests.swift */,
-				9933B6CA2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift */,
-			);
-			path = GameCounterUITests;
 			sourceTree = "<group>";
 		};
 		9940490C2BA51BB0001A2984 /* AppIntents */ = {
@@ -333,24 +303,6 @@
 			productReference = 9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9933B6C32B9E128500CFA3CC /* GameCounterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterUITests" */;
-			buildPhases = (
-				9933B6C02B9E128500CFA3CC /* Sources */,
-				9933B6C12B9E128500CFA3CC /* Frameworks */,
-				9933B6C22B9E128500CFA3CC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9933B6C62B9E128500CFA3CC /* PBXTargetDependency */,
-			);
-			name = GameCounterUITests;
-			productName = "Game CounterUITests";
-			productReference = 9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9979B46F2BA10B1200FC2D9B /* Build configuration list for PBXNativeTarget "GameCounterWidgetExtension" */;
@@ -406,10 +358,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 9933B6A92B9E128200CFA3CC;
 					};
-					9933B6C32B9E128500CFA3CC = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 9933B6A92B9E128200CFA3CC;
-					};
 					9979B4592BA10B1000FC2D9B = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -435,7 +383,6 @@
 			targets = (
 				9933B6A92B9E128200CFA3CC /* GameCounter */,
 				9933B6B92B9E128500CFA3CC /* GameCounterTests */,
-				9933B6C32B9E128500CFA3CC /* GameCounterUITests */,
 				9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */,
 				99984CC72BA61BD8004EACCA /* CountableVisionOS */,
 			);
@@ -454,13 +401,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9933B6B82B9E128500CFA3CC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9933B6C22B9E128500CFA3CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -509,15 +449,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9933B6C02B9E128500CFA3CC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9933B6C92B9E128500CFA3CC /* GameCounterUITests.swift in Sources */,
-				9933B6CB2B9E128500CFA3CC /* GameCounterUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9979B4562BA10B1000FC2D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,11 +479,6 @@
 			isa = PBXTargetDependency;
 			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
 			targetProxy = 9933B6BB2B9E128500CFA3CC /* PBXContainerItemProxy */;
-		};
-		9933B6C62B9E128500CFA3CC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9933B6A92B9E128200CFA3CC /* GameCounter */;
-			targetProxy = 9933B6C52B9E128500CFA3CC /* PBXContainerItemProxy */;
 		};
 		99CBDBED2BA4E3930008954E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -801,42 +727,6 @@
 			};
 			name = Release;
 		};
-		9933B6D52B9E128500CFA3CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 47C966XSTJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.Game-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Game Counter";
-			};
-			name = Debug;
-		};
-		9933B6D62B9E128500CFA3CC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 47C966XSTJ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.Game-CounterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Game Counter";
-			};
-			name = Release;
-		};
 		9979B46D2BA10B1200FC2D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -989,15 +879,6 @@
 			buildConfigurations = (
 				9933B6D22B9E128500CFA3CC /* Debug */,
 				9933B6D32B9E128500CFA3CC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9933B6D42B9E128500CFA3CC /* Build configuration list for PBXNativeTarget "GameCounterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9933B6D52B9E128500CFA3CC /* Debug */,
-				9933B6D62B9E128500CFA3CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
