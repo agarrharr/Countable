@@ -49,7 +49,9 @@ public struct CounterView: View {
                             .font(.title2)
                             .foregroundColor(primaryColor)
                     }
+                    #if !os(visionOS)
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    #endif
                     .accessibilityLabel("Subtract 1 from \(playerName)")
                     
                     Spacer()
@@ -62,7 +64,9 @@ public struct CounterView: View {
                             .font(.title2)
                             .foregroundColor(primaryColor)
                     }
+                    #if !os(visionOS)
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    #endif
                     .accessibilityLabel("Subtract 5 from \(playerName)")
                 }
                 Spacer()
@@ -74,7 +78,9 @@ public struct CounterView: View {
                             .font(.title2)
                             .foregroundColor(primaryColor)
                     }
+                    #if !os(visionOS)
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    #endif
                     .accessibilityLabel("Add 1 to \(playerName)")
 
                     Spacer()
@@ -87,7 +93,9 @@ public struct CounterView: View {
                             .font(.title2)
                             .foregroundColor(primaryColor)
                     }
+                    #if !os(visionOS)
                     .buttonStyle(SimpleButtonStyle(buttonColor: buttonColor))
+                    #endif
                     .accessibilityLabel("Add 5 to \(playerName)")
 
                 }
