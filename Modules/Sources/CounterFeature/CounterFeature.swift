@@ -1,6 +1,8 @@
 import ComposableArchitecture
 import UIKit
+#if canImport(WidgetKit)
 import WidgetKit
+#endif
 
 @Reducer
 public struct CounterFeature {
@@ -31,10 +33,16 @@ public struct CounterFeature {
             case let .buttonTapped(amount):
                 state.score += amount
                 return .run { send in
+                    await send(.delegate(.onButtonTapped))
+
+                    #if !os(visionOS)
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
+                    #endif
+
+                    #if canImport(WidgetKit)
                     WidgetCenter.shared.reloadTimelines(ofKind: "com.garrett-harris.adam.game-counter-app.singleplayerwidget")
-                    await send(.delegate(.onButtonTapped))
+                    #endif
                 }
             }
         }

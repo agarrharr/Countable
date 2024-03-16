@@ -53,15 +53,19 @@ public struct AppFeature {
                 state.player1Score = state.startingScoreInt
                 state.player2Score = state.startingScoreInt
                 return .run { [score1 = state.player1Score, score2 = state.player2Score] _ in
+                    #if !os(visionOS)
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
+                    #endif
                     announcer.announce(score1: score1, score2: score2)
                 }
             case .settingsButtonTapped:
                 state.destination = .settings(SettingsFeature.State(startingScore: state.$startingScore))
                 return .run { _ in
+                    #if !os(visionOS)
                     let impactFeedback = await UIImpactFeedbackGenerator(style: .medium)
                     await impactFeedback.impactOccurred()
+                    #endif
                 }
             case let .player1Counter(.delegate(action)),
             let .player2Counter(.delegate(action)):

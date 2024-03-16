@@ -21,9 +21,15 @@
 		9979B4632BA10B1100FC2D9B /* SinglePlayerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4622BA10B1100FC2D9B /* SinglePlayerWidget.swift */; };
 		9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4642BA10B1100FC2D9B /* AppIntent.swift */; };
 		9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9979B4662BA10B1200FC2D9B /* Assets.xcassets */; };
+		99984CC32BA6188E004EACCA /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CC22BA6188E004EACCA /* AppFeature */; };
+		99984CCD2BA61BD9004EACCA /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CCC2BA61BD9004EACCA /* RealityKitContent */; };
+		99984CCF2BA61BD9004EACCA /* CountableVisionOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */; };
+		99984CD12BA61BD9004EACCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99984CD02BA61BD9004EACCA /* ContentView.swift */; };
+		99984CD32BA61BDA004EACCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99984CD22BA61BDA004EACCA /* Assets.xcassets */; };
+		99984CD62BA61BDA004EACCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99984CD52BA61BDA004EACCA /* Preview Assets.xcassets */; };
+		99984CDC2BA61BE9004EACCA /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CDB2BA61BE9004EACCA /* AppFeature */; };
 		99AF206E2BA4D7E600E3099D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */; };
 		99CBDBEB2BA4E3930008954E /* GameCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		99CBDBF22BA507840008954E /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99CBDBF12BA507840008954E /* AppFeature */; };
 		99CBDBF42BA5092F0008954E /* SubtractPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */; };
 		99CBDBF62BA5099F0008954E /* CountableAppShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */; };
 		99CBDBF82BA509D10008954E /* ShortcutsSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF72BA509D10008954E /* ShortcutsSnippetView.swift */; };
@@ -103,6 +109,13 @@
 		9979B4702BA10D0200FC2D9B /* GameCounterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounterWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9979B4712BA10D3900FC2D9B /* GameCounter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameCounter.entitlements; sourceTree = "<group>"; };
 		9979B4842BA111B600FC2D9B /* AddPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPointsIntent.swift; sourceTree = "<group>"; };
+		99984CC82BA61BD8004EACCA /* CountableVisionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountableVisionOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99984CCB2BA61BD9004EACCA /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableVisionOSApp.swift; sourceTree = "<group>"; };
+		99984CD02BA61BD9004EACCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		99984CD22BA61BDA004EACCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99984CD52BA61BDA004EACCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99984CD72BA61BDA004EACCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractPointsIntent.swift; sourceTree = "<group>"; };
 		99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableAppShortcuts.swift; sourceTree = "<group>"; };
@@ -117,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99CBDBF22BA507840008954E /* AppFeature in Frameworks */,
+				99984CC32BA6188E004EACCA /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +157,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		99984CC52BA61BD8004EACCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99984CCD2BA61BD9004EACCA /* RealityKitContent in Frameworks */,
+				99984CDC2BA61BE9004EACCA /* AppFeature in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -155,6 +177,8 @@
 				9933B6BD2B9E128500CFA3CC /* GameCounterTests */,
 				9933B6C72B9E128500CFA3CC /* GameCounterUITests */,
 				9979B45F2BA10B1100FC2D9B /* GameCounterWidget */,
+				99984CC92BA61BD9004EACCA /* CountableVisionOS */,
+				99984CCA2BA61BD9004EACCA /* Packages */,
 				9933B6AB2B9E128200CFA3CC /* Products */,
 				99DFD0702B9E351E0032AC0B /* Frameworks */,
 			);
@@ -167,6 +191,7 @@
 				9933B6BA2B9E128500CFA3CC /* GameCounterTests.xctest */,
 				9933B6C42B9E128500CFA3CC /* GameCounterUITests.xctest */,
 				9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */,
+				99984CC82BA61BD8004EACCA /* CountableVisionOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +252,34 @@
 			path = GameCounterWidget;
 			sourceTree = "<group>";
 		};
+		99984CC92BA61BD9004EACCA /* CountableVisionOS */ = {
+			isa = PBXGroup;
+			children = (
+				99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */,
+				99984CD02BA61BD9004EACCA /* ContentView.swift */,
+				99984CD22BA61BDA004EACCA /* Assets.xcassets */,
+				99984CD72BA61BDA004EACCA /* Info.plist */,
+				99984CD42BA61BDA004EACCA /* Preview Content */,
+			);
+			path = CountableVisionOS;
+			sourceTree = "<group>";
+		};
+		99984CCA2BA61BD9004EACCA /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				99984CCB2BA61BD9004EACCA /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		99984CD42BA61BDA004EACCA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				99984CD52BA61BDA004EACCA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		99DFD0702B9E351E0032AC0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +309,7 @@
 			);
 			name = GameCounter;
 			packageProductDependencies = (
-				99CBDBF12BA507840008954E /* AppFeature */,
+				99984CC22BA6188E004EACCA /* AppFeature */,
 			);
 			productName = "Game Counter";
 			productReference = 9933B6AA2B9E128200CFA3CC /* GameCounter.app */;
@@ -315,6 +368,27 @@
 			productReference = 9979B45A2BA10B1000FC2D9B /* GameCounterWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		99984CC72BA61BD8004EACCA /* CountableVisionOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99984CD82BA61BDA004EACCA /* Build configuration list for PBXNativeTarget "CountableVisionOS" */;
+			buildPhases = (
+				99984CC42BA61BD8004EACCA /* Sources */,
+				99984CC52BA61BD8004EACCA /* Frameworks */,
+				99984CC62BA61BD8004EACCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountableVisionOS;
+			packageProductDependencies = (
+				99984CCC2BA61BD9004EACCA /* RealityKitContent */,
+				99984CDB2BA61BE9004EACCA /* AppFeature */,
+			);
+			productName = CountableVisionOS;
+			productReference = 99984CC82BA61BD8004EACCA /* CountableVisionOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -339,6 +413,9 @@
 					9979B4592BA10B1000FC2D9B = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					99984CC72BA61BD8004EACCA = {
+						CreatedOnToolsVersion = 15.3;
+					};
 				};
 			};
 			buildConfigurationList = 9933B6A52B9E128200CFA3CC /* Build configuration list for PBXProject "GameCounter" */;
@@ -360,6 +437,7 @@
 				9933B6B92B9E128500CFA3CC /* GameCounterTests */,
 				9933B6C32B9E128500CFA3CC /* GameCounterUITests */,
 				9979B4592BA10B1000FC2D9B /* GameCounterWidgetExtension */,
+				99984CC72BA61BD8004EACCA /* CountableVisionOS */,
 			);
 		};
 /* End PBXProject section */
@@ -394,6 +472,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99984CC62BA61BD8004EACCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99984CD62BA61BDA004EACCA /* Preview Assets.xcassets in Resources */,
+				99984CD32BA61BDA004EACCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +529,15 @@
 				99CBDBFB2BA50C0E0008954E /* Player.swift in Sources */,
 				99CBDBFD2BA50C260008954E /* ShortcutsSnippetView.swift in Sources */,
 				9979B4652BA10B1100FC2D9B /* AppIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99984CC42BA61BD8004EACCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99984CD12BA61BD9004EACCA /* ContentView.swift in Sources */,
+				99984CCF2BA61BD9004EACCA /* CountableVisionOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +907,62 @@
 			};
 			name = Release;
 		};
+		99984CD92BA61BDA004EACCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CountableVisionOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 47C966XSTJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.CountableVisionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Debug;
+		};
+		99984CDA2BA61BDA004EACCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CountableVisionOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 47C966XSTJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.garrett-harris.adam.CountableVisionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -859,10 +1011,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		99984CD82BA61BDA004EACCA /* Build configuration list for PBXNativeTarget "CountableVisionOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99984CD92BA61BDA004EACCA /* Debug */,
+				99984CDA2BA61BDA004EACCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		99CBDBF12BA507840008954E /* AppFeature */ = {
+		99984CC22BA6188E004EACCA /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+		99984CCC2BA61BD9004EACCA /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		99984CDB2BA61BE9004EACCA /* AppFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppFeature;
 		};

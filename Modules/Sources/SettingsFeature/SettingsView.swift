@@ -38,6 +38,7 @@ public struct SettingsView: View {
                                         .multilineTextAlignment(.trailing)
                                         .keyboardType(.numberPad)
                                         .focused($isInputActive)
+                                        #if !os(visionOS)
                                         .toolbar {
                                             ToolbarItemGroup(placement: .keyboard) {
                                                 Spacer()
@@ -47,6 +48,7 @@ public struct SettingsView: View {
                                                 }
                                             }
                                         }
+                                        #endif
                                 } label: {
                                   Text("Starting Score")
                                 }

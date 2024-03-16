@@ -1,4 +1,3 @@
-import WidgetKit
 import AppIntents
 
 struct SinglePlayerConfigurationAppIntent: WidgetConfigurationIntent {

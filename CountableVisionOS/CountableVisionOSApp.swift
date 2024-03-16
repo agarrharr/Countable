@@ -10,7 +10,7 @@ extension UserDefaults {
 }
 
 @main
-struct GameCounterApp: App {
+struct CountableVisionOSApp: App {
     let store: StoreOf<AppFeature> = Store(initialState: AppFeature.State()) {
         AppFeature()._printChanges()
     } withDependencies: {
@@ -20,10 +20,6 @@ struct GameCounterApp: App {
     var body: some Scene {
         WindowGroup {
             AppView(store: store)
-            .onAppear {
-                // Keep the screen on
-                UIApplication.shared.isIdleTimerDisabled = true
-            }
         }
     }
 }
