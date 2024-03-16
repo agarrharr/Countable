@@ -21,5 +21,6 @@ struct CountableVisionOSApp: App {
         WindowGroup {
             AppView(store: store)
         }
+        .defaultSize(width: 400, height: 600)
     }
 }
