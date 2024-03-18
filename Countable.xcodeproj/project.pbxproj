@@ -14,6 +14,7 @@
 		99297B362BA655E7004BAE5E /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99297B352BA655E7004BAE5E /* AppFeature */; };
 		9933B6B22B9E128500CFA3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9933B6B12B9E128500CFA3CC /* Assets.xcassets */; };
 		9933B6BF2B9E128500CFA3CC /* CountableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9933B6BE2B9E128500CFA3CC /* CountableTests.swift */; };
+		996090282BA9022C0003E027 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 996090272BA9022C0003E027 /* PrivacyInfo.xcprivacy */; };
 		9979B45C2BA10B1100FC2D9B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */; };
 		9979B45E2BA10B1100FC2D9B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9979B45D2BA10B1100FC2D9B /* SwiftUI.framework */; };
 		9979B4612BA10B1100FC2D9B /* CountableWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9979B4602BA10B1100FC2D9B /* CountableWidgetBundle.swift */; };
@@ -84,6 +85,7 @@
 		9933B6B12B9E128500CFA3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9933B6BA2B9E128500CFA3CC /* CountableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9933B6BE2B9E128500CFA3CC /* CountableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableTests.swift; sourceTree = "<group>"; };
+		996090272BA9022C0003E027 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = CountableWidget/PrivacyInfo.xcprivacy; sourceTree = SOURCE_ROOT; };
 		9973B1C12BA4DB0900B63BAC /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		9979B45A2BA10B1000FC2D9B /* CountableWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CountableWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9979B45B2BA10B1000FC2D9B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -223,9 +225,10 @@
 		99984CC92BA61BD9004EACCA /* CountableVisionOS */ = {
 			isa = PBXGroup;
 			children = (
-				99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */,
-				99984CD02BA61BD9004EACCA /* ContentView.swift */,
 				99984CD22BA61BDA004EACCA /* Assets.xcassets */,
+				99984CD02BA61BD9004EACCA /* ContentView.swift */,
+				99984CCE2BA61BD9004EACCA /* CountableVisionOSApp.swift */,
+				996090272BA9022C0003E027 /* PrivacyInfo.xcprivacy */,
 				99984CD72BA61BDA004EACCA /* Info.plist */,
 				99984CD42BA61BDA004EACCA /* Preview Content */,
 			);
@@ -416,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996090282BA9022C0003E027 /* PrivacyInfo.xcprivacy in Resources */,
 				99984CD62BA61BDA004EACCA /* Preview Assets.xcassets in Resources */,
 				99984CD32BA61BDA004EACCA /* Assets.xcassets in Resources */,
 			);
