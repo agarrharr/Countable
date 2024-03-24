@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "gameCounterIcon.png",
-      "idiom" : "universal"
+      "idiom" : "vision",
+      "scale" : "2x"
     }
   ],
   "info" : {
