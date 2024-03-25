@@ -12,6 +12,8 @@ public struct CounterView: View {
     var buttonColor: Color
     var store: StoreOf<CounterFeature>
     
+    @State private var animationCountsDown: Bool = true
+    
     private var primaryColor: Color {
         switch colorMode {
         case .light:
@@ -34,6 +36,8 @@ public struct CounterView: View {
                 .padding()
                 .font(Font.custom("Bitter-Regular", size: 90))
                 .minimumScaleFactor(0.3)
+                .animation(.default, value: store.score)
+                .contentTransition(.numericText(countsDown: animationCountsDown))
                 .foregroundStyle(primaryColor)
                 .accessibilityLabel("\(playerName): \(store.score)")
             
@@ -43,6 +47,7 @@ public struct CounterView: View {
                 Spacer()
                 VStack {
                     Button {
+                        self.animationCountsDown = false
                         store.send(.buttonTapped(-1))
                     } label: {
                         Text("-1")
@@ -58,6 +63,7 @@ public struct CounterView: View {
                         .frame(height: 20)
                     
                     Button {
+                        self.animationCountsDown = false
                         store.send(.buttonTapped(-5))
                     } label: {
                         Text("-5")
@@ -72,6 +78,7 @@ public struct CounterView: View {
                 Spacer()
                 VStack {
                     Button {
+                        self.animationCountsDown = true
                         store.send(.buttonTapped(1))
                     } label: {
                         Text("+1")
@@ -87,6 +94,7 @@ public struct CounterView: View {
                         .frame(height: 20)
                     
                     Button {
+                        self.animationCountsDown = true
                         store.send(.buttonTapped(5))
                     } label: {
                         Text("+5")

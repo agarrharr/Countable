@@ -17,7 +17,9 @@ struct CloseSheetButton: View {
                 .clipShape(Circle())
                 #endif
                 .accessibility(label: Text("Close"))
+                #if !os(visionOS)
                 .accessibility(hint: Text("Double tap to close the sheet"))
+                #endif
         }
     }
 }
