@@ -26,6 +26,7 @@
 		99984CD32BA61BDA004EACCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99984CD22BA61BDA004EACCA /* Assets.xcassets */; };
 		99984CD62BA61BDA004EACCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99984CD52BA61BDA004EACCA /* Preview Assets.xcassets */; };
 		99984CDC2BA61BE9004EACCA /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 99984CDB2BA61BE9004EACCA /* AppFeature */; };
+		99AB83C62BB11896009AEDFA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 99AB83C52BB11896009AEDFA /* PrivacyInfo.xcprivacy */; };
 		99AF206E2BA4D7E600E3099D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */; };
 		99CBDBEB2BA4E3930008954E /* CountableWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9979B45A2BA10B1000FC2D9B /* CountableWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99CBDBF42BA5092F0008954E /* SubtractPointsIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */; };
@@ -105,6 +106,7 @@
 		99984CD22BA61BDA004EACCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99984CD52BA61BDA004EACCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99984CD72BA61BDA004EACCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AB83C52BB11896009AEDFA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99AF206D2BA4D7E600E3099D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99CBDBF32BA5092F0008954E /* SubtractPointsIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractPointsIntent.swift; sourceTree = "<group>"; };
 		99CBDBF52BA5099F0008954E /* CountableAppShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableAppShortcuts.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				9979B4642BA10B1100FC2D9B /* AppIntent.swift */,
 				9979B4662BA10B1200FC2D9B /* Assets.xcassets */,
 				9979B4682BA10B1200FC2D9B /* Info.plist */,
+				99AB83C52BB11896009AEDFA /* PrivacyInfo.xcprivacy */,
 			);
 			path = CountableWidget;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AB83C62BB11896009AEDFA /* PrivacyInfo.xcprivacy in Resources */,
 				9979B4672BA10B1200FC2D9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
