@@ -12,4 +12,11 @@ extension Player: AppEnum {
         .player1: "Player 1",
         .player2: "Player 2"
     ]
+    
+    var shortString: String {
+        switch self {
+        case .player1: "P1"
+        case .player2: "P2"
+        }
+    }
 }

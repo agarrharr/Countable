@@ -2,6 +2,29 @@ import WidgetKit
 import SwiftUI
 import AppIntents
 
+extension Player {
+    var buttonColor: Color {
+        switch self {
+        case .player1: Color("DarkBlue")
+        case .player2: Color("LightBlue")
+        }
+    }
+    
+    var backgroundColor: Color {
+        switch self {
+        case .player1: Color("DarkBlueBackground")
+        case .player2: Color("LightBlueBackground")
+        }
+    }
+    
+    var foregroundColor: Color {
+        switch self {
+        case .player1: .white
+        case .player2: .black
+        }
+    }
+}
+
 struct SinglePlayerProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SinglePlayerEntry {
         SinglePlayerEntry(date: Date(), score: 0, configuration: SinglePlayerConfigurationAppIntent())
@@ -47,47 +70,84 @@ struct SinglePlayerWidgetEntryView : View {
     var body: some View {
         switch family {
         case .systemSmall:
-            VStack {
-                Text("\(entry.configuration.player.rawValue)")
-                
-                Text("\(entry.score)")
-                    .contentTransition(.numericText())
-                    .privacySensitive()
-                
-                HStack {
-                    Button(
-                        intent: SubtractPointsIntent(
-                            amount: entry.configuration.$amountToSubtract,
-                            player: entry.configuration.$player
-                        )
-                    ) {
-                        Text("-")
-                    }
+            ZStack {
+                entry.configuration.player.backgroundColor
+                VStack {
+                    Text("\(entry.configuration.player.rawValue)")
+                        .foregroundStyle(entry.configuration.player.foregroundColor)
+                        .font(.body)
+                    
+                    Text("\(entry.score)")
+                        .foregroundStyle(entry.configuration.player.foregroundColor)
+                        .font(.title)
+                        .contentTransition(.numericText())
+                        .privacySensitive()
                     
                     Spacer()
                     
-                    Button(
-                        intent: AddPointsIntent(
-                            amount: entry.configuration.$amountToAdd,
-                            player: entry.configuration.$player
+                    HStack {
+                        Button(
+                            intent: SubtractPointsIntent(
+                                amount: entry.configuration.$amountToSubtract,
+                                player: entry.configuration.$player
+                            )
+                        ) {
+                            Text("-\(entry.configuration.amountToSubtract)")
+                                .foregroundStyle(entry.configuration.player.foregroundColor)
+                                .clipShape(Circle())
+                        }
+                        .background(
+                            Circle()
+                                .fill(entry.configuration.player.buttonColor)
+                                .shadow(color: .black.opacity(0.2), radius: 5, x: 4, y: 4)
+                                .shadow(color: .white.opacity(0.2), radius: 5, x: 0, y: -1)
                         )
-                    ) {
-                        Text("+")
+                        
+                        Spacer()
+                        
+                        Button(
+                            intent: AddPointsIntent(
+                                amount: entry.configuration.$amountToAdd,
+                                player: entry.configuration.$player
+                            )
+                        ) {
+                            Text("+\(entry.configuration.amountToAdd)")
+                                .foregroundStyle(entry.configuration.player.foregroundColor)
+                                .clipShape(Circle())
+                        }
+                        .background(
+                            Circle()
+                                .fill(entry.configuration.player.buttonColor)
+                                .shadow(color: .black.opacity(0.2), radius: 5, x: 4, y: 4)
+                                .shadow(color: .white.opacity(0.2), radius: 5, x: 0, y: -1)
+                        )
                     }
                 }
+                .padding()
             }
         case .accessoryCircular:
             VStack {
                 Text("\(entry.score)")
-                Text("\(entry.configuration.player.rawValue)")
+                    .font(.title)
+                Text("\(entry.configuration.player.shortString)")
+                    .font(.caption)
             }
+            .frame(maxWidth: .infinity)
+            .background(.black)
+            .clipShape(Circle())
         case .accessoryInline:
-            Text("\(entry.configuration.player.rawValue): \(entry.score) points")
-        case .accessoryRectangular:
-            VStack(alignment: .leading) {
-                Text("\(entry.configuration.player.rawValue)")
-                Text("\(entry.score)")
+            ViewThatFits {
+                Text("\(entry.configuration.player.rawValue): \(entry.score) points")
+                Text("\(entry.configuration.player.shortString): \(entry.score) points")
+                Text("\(entry.configuration.player.shortString): \(entry.score)")
             }
+        case .accessoryRectangular:
+            VStack(alignment: .center) {
+                Text("\(entry.score)")
+                    .font(.title)
+                Text("\(entry.configuration.player.rawValue)")
+            }
+            .padding()
         default:
             Text("\(entry.score)")
         }
@@ -102,6 +162,7 @@ struct SinglePlayerWidget: Widget {
             SinglePlayerWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .contentMarginsDisabled()
         .configurationDisplayName("Single Player")
         .description("Keep track of one player's score")
 #if os(watchOS)
@@ -126,18 +187,25 @@ extension SinglePlayerConfigurationAppIntent {
     }
 }
 
-#Preview("System Small", as: .systemSmall) {
+#Preview("System Small Player 1", as: .systemSmall) {
     SinglePlayerWidget()
 } timeline: {
     SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
     SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
 }
 
+#Preview("System Small Player 2", as: .systemSmall) {
+    SinglePlayerWidget()
+} timeline: {
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
+}
+
 #Preview("Accessory Circular", as: .accessoryCircular) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
 
 #Preview("Accessory Inline", as: .accessoryInline) {
@@ -150,6 +218,6 @@ extension SinglePlayerConfigurationAppIntent {
 #Preview("Accessory Rectangular", as: .accessoryRectangular) {
     SinglePlayerWidget()
 } timeline: {
-    SinglePlayerEntry(date: .now, score: 20, configuration: .player1)
-    SinglePlayerEntry(date: .now, score: 22, configuration: .player1)
+    SinglePlayerEntry(date: .now, score: 20, configuration: .player2)
+    SinglePlayerEntry(date: .now, score: 22, configuration: .player2)
 }
