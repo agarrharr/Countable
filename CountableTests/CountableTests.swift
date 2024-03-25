@@ -1,5 +1,5 @@
 import XCTest
-@testable import GameCounter
+@testable import Countable
 
 final class CountableTests: XCTestCase {
     func testExample() throws {
